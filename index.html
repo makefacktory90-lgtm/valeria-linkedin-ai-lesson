@@ -1,770 +1,301 @@
 <!doctype html>
 <html lang="ru">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Lesson 1: AI-Powered LinkedIn Visibility System for Valeria</title>
-  <style>
-    :root {
-      --ink: #111111;
-      --muted: #5b5b5b;
-      --line: #d8d2c4;
-      --paper: #fbfaf7;
-      --soft: #f2efe8;
-      --gold: #b69a5b;
-      --gold-dark: #7b642e;
-      --white: #ffffff;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      background: var(--paper);
-      color: var(--ink);
-      font-family: Arial, Helvetica, sans-serif;
-      line-height: 1.55;
-    }
-
-    .page {
-      max-width: 1160px;
-      margin: 0 auto;
-      padding: 44px 28px 72px;
-    }
-
-    .kicker {
-      margin: 0 0 18px;
-      color: var(--gold-dark);
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-    }
-
-    header {
-      padding: 30px 0 36px;
-      border-top: 5px solid var(--ink);
-      border-bottom: 1px solid var(--line);
-    }
-
-    h1, h2, h3 {
-      margin: 0;
-      font-family: Georgia, "Times New Roman", serif;
-      font-weight: 700;
-      letter-spacing: 0;
-      line-height: 1.05;
-    }
-
-    h1 {
-      max-width: 920px;
-      font-size: clamp(42px, 7vw, 88px);
-    }
-
-    .subtitle {
-      max-width: 760px;
-      margin: 22px 0 0;
-      color: var(--muted);
-      font-size: 19px;
-      line-height: 1.5;
-    }
-
-    .meta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 26px;
-    }
-
-    .tag {
-      border: 1px solid var(--line);
-      background: var(--white);
-      padding: 8px 11px;
-      font-size: 13px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.04em;
-    }
-
-    section {
-      margin-top: 44px;
-      padding-top: 30px;
-      border-top: 1px solid var(--line);
-    }
-
-    .section-head {
-      display: grid;
-      grid-template-columns: minmax(140px, 220px) 1fr;
-      gap: 30px;
-      align-items: start;
-      margin-bottom: 24px;
-    }
-
-    .number {
-      color: var(--gold-dark);
-      font-size: 13px;
-      font-weight: 800;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-    }
-
-    h2 {
-      font-size: clamp(29px, 4vw, 48px);
-    }
-
-    h3 {
-      margin-bottom: 10px;
-      font-size: 24px;
-    }
-
-    p {
-      margin: 0 0 14px;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-    }
-
-    .grid.two {
-      grid-template-columns: repeat(2, 1fr);
-    }
-
-    .card {
-      background: var(--white);
-      border: 1px solid var(--line);
-      padding: 22px;
-    }
-
-    .card.gold {
-      background: #f7f1df;
-      border-color: #d5c28d;
-    }
-
-    .card-title {
-      margin-bottom: 8px;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 22px;
-      line-height: 1.15;
-      font-weight: 700;
-    }
-
-    .small {
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    .quote {
-      margin: 18px 0 0;
-      padding: 22px 26px;
-      border-left: 5px solid var(--gold);
-      background: var(--white);
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 23px;
-      line-height: 1.35;
-    }
-
-    .timeline {
-      display: grid;
-      gap: 16px;
-    }
-
-    .block {
-      display: grid;
-      grid-template-columns: 120px 1fr;
-      gap: 20px;
-      padding: 22px 0;
-      border-bottom: 1px solid var(--line);
-    }
-
-    .time {
-      color: var(--gold-dark);
-      font-size: 15px;
-      font-weight: 800;
-    }
-
-    ul, ol {
-      margin: 8px 0 0;
-      padding-left: 21px;
-    }
-
-    li {
-      margin: 7px 0;
-    }
-
-    .english {
-      color: var(--ink);
-      font-weight: 700;
-    }
-
-    .script {
-      margin-top: 12px;
-      padding: 18px;
-      background: var(--soft);
-      border: 1px solid var(--line);
-    }
-
-    .script-label {
-      margin-bottom: 8px;
-      color: var(--gold-dark);
-      font-size: 12px;
-      font-weight: 800;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-    }
-
-    pre {
-      margin: 12px 0 0;
-      padding: 18px;
-      overflow-x: auto;
-      white-space: pre-wrap;
-      background: #171717;
-      color: #f4f0e6;
-      border-left: 5px solid var(--gold);
-      font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
-      font-size: 13.5px;
-      line-height: 1.55;
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      background: var(--white);
-      font-size: 14px;
-    }
-
-    th, td {
-      padding: 12px 10px;
-      border: 1px solid var(--line);
-      text-align: left;
-      vertical-align: top;
-    }
-
-    th {
-      background: var(--ink);
-      color: var(--white);
-      font-size: 12px;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-    }
-
-    .footer {
-      margin-top: 54px;
-      padding: 28px 0 0;
-      border-top: 5px solid var(--ink);
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    @media print {
-      body {
-        background: white;
-      }
-
-      .page {
-        max-width: none;
-        padding: 24px;
-      }
-
-      section {
-        break-inside: avoid;
-      }
-
-      pre {
-        white-space: pre-wrap;
-      }
-    }
-
-    @media (max-width: 820px) {
-      .section-head,
-      .block,
-      .grid,
-      .grid.two {
-        grid-template-columns: 1fr;
-      }
-
-      .page {
-        padding: 28px 18px 56px;
-      }
-    }
-  </style>
-</head>
-<body>
-  <main class="page">
-    <header>
-      <p class="kicker">Lesson 1 / AI-Powered LinkedIn Visibility System</p>
-      <h1>LinkedIn Visibility System for Valeria</h1>
-      <p class="subtitle">
-        Первый урок: позиционирование, контентная архитектура и AI-workflow для карьерной видимости в U.S. Learning & Development / Transformation рынке.
-      </p>
-      <div class="meta">
-        <span class="tag">60 minutes</span>
-        <span class="tag">Client handout</span>
-        <span class="tag">Business English outputs</span>
-        <span class="tag">AI-assisted content system</span>
-      </div>
-    </header>
-
-    <section>
-      <div class="section-head">
-        <div class="number">Lesson Goal</div>
-        <h2>Что должно быть готово к концу урока</h2>
-      </div>
-      <div class="grid">
-        <div class="card">
-          <div class="card-title">Who I am on LinkedIn</div>
-          <p>Четкая профессиональная рамка: не просто instructional designer, а learning strategist для сложных трансформаций.</p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Лера · урок по LinkedIn visibility, AI-workflow, позиционированию и домашнему заданию после Zoom-встречи."
+    />
+    <title>Лера · LinkedIn Visibility Lesson</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <section class="hero" aria-labelledby="page-title">
+        <div class="hero-meta">
+          <span>Valeria</span>
+          <span>Lesson 1</span>
+          <span>LinkedIn + AI</span>
         </div>
-        <div class="card">
-          <div class="card-title">What I write about</div>
-          <p>Пять устойчивых контентных направлений, которые поддерживают карьерную цель и помогают тестировать аудиторию.</p>
-        </div>
-        <div class="card">
-          <div class="card-title">How AI supports me</div>
-          <p>Понятный AI-workflow: стратегия, идеи, черновики, редактура, research, hooks, проверка качества.</p>
-        </div>
-        <div class="card">
-          <div class="card-title">First 3 posts</div>
-          <p>Выбранные темы для первой пачки контента, чтобы не остаться в режиме бесконечной подготовки.</p>
-        </div>
-        <div class="card">
-          <div class="card-title">How I read signals</div>
-          <p>Минимальная система аналитики: что измеряем, какие реакции важны, как решаем, что повторять.</p>
-        </div>
-        <div class="card gold">
-          <div class="card-title">Main principle</div>
-          <p class="english">AI is not here to invent your expertise. It is here to extract it, structure it, pressure-test it, and help you publish consistently.</p>
-        </div>
-      </div>
-    </section>
 
-    <section>
-      <div class="section-head">
-        <div class="number">0-7 min</div>
-        <h2>Frame the Work</h2>
-      </div>
-      <div class="block">
-        <div class="time">Purpose</div>
-        <div>
-          <p>Задать правильную рамку: мы не учимся “делать посты”. Мы строим систему карьерной видимости, где LinkedIn становится инструментом проверки позиционирования и выхода на нужную профессиональную аудиторию.</p>
-          <div class="script">
-            <div class="script-label">Say this</div>
-            <p>Val, today we are not simply learning how to write LinkedIn posts. That is too small. We are building an AI-powered LinkedIn visibility system.</p>
-            <p>The goal for the next 2-3 months is not to become a blogger. The goal is to collect market signals: which parts of your expertise are legible, who responds, and which topics move you closer to senior L&D and transformation roles.</p>
+        <div class="hero-layout">
+          <div class="hero-copy">
+            <p class="eyebrow">AI-powered visibility system</p>
+            <h1 id="page-title">Learning for the messy middle of transformation</h1>
+            <p class="lead">
+              Урок про то, как Лере выйти в LinkedIn не как “ещё один
+              instructional designer”, а как сильному L&D / transformation
+              специалисту, который умеет переводить изменения в поведение людей
+              и бизнес-результат.
+            </p>
+          </div>
+
+          <aside class="promise-card" aria-label="Главная рамка урока">
+            <p class="card-kicker">Main principle</p>
+            <p>
+              AI не придумывает экспертизу за Леру. Он вытаскивает её,
+              структурирует, проверяет на внятность и помогает публиковаться
+              регулярно. Ну да, скучная магия: делать руками всё равно придётся.
+            </p>
+          </aside>
+        </div>
+      </section>
+
+      <section class="zoom-section" aria-labelledby="zoom-title">
+        <div class="zoom-copy">
+          <p class="section-label">Запись урока</p>
+          <h2 id="zoom-title">Сначала включи Zoom, потом держи эту страницу рядом</h2>
+          <p>
+            Окошко оставлено большим специально: урок удобно смотреть в одной
+            вкладке, а ниже сверяться с рамкой, решениями и домашкой.
+          </p>
+          <div class="zoom-actions">
+            <a
+              class="primary-action"
+              href="https://zoom.us/recording/detail?meeting_id=hWEWzrmMQKG3tRtN5ZrXEg%3D%3D"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Открыть запись Zoom
+            </a>
+            <button class="copy-code" type="button" data-code="Ира досылает, если нужен код доступа">
+              Код доступа: дослать
+            </button>
           </div>
         </div>
-      </div>
-      <div class="block">
-        <div class="time">Territory</div>
-        <div>
-          <p>Зафиксировать территорию бренда, чтобы все дальнейшие решения были не случайными, а подчиненными одной профессиональной логике.</p>
-          <div class="quote">
-            Your territory is learning in the messy middle of transformation. Not courses. Not LMS. Not instructional design as production. Learning as adoption, behavior change, business performance, and transformation enablement.
+
+        <div class="zoom-frame" aria-label="Большое окно для Zoom-записи">
+          <div class="zoom-placeholder">
+            <span class="window-dot"></span>
+            <span class="window-dot"></span>
+            <span class="window-dot"></span>
+            <strong>Zoom recording window</strong>
+            <p>
+              Открой запись в соседней вкладке или отдельном окне, а эту
+              страницу держи рядом как карту урока. Встраивать Zoom внутрь
+              страницы обычно нельзя из-за настроек безопасности самого Zoom.
+            </p>
+            <a
+              class="frame-action"
+              href="https://zoom.us/recording/detail?meeting_id=hWEWzrmMQKG3tRtN5ZrXEg%3D%3D"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Смотреть запись
+            </a>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section>
-      <div class="section-head">
-        <div class="number">7-15 min</div>
-        <h2>Positioning</h2>
-      </div>
-      <p>Задача блока - выбрать формулировку, которая звучит достаточно senior, достаточно конкретно и не загоняет Валерию в роль production-level instructional designer.</p>
-      <div class="grid">
-        <div class="card">
-          <div class="card-title">Option 1</div>
-          <p class="english">I help translate complex transformation into learning systems that change behavior, not just deliver content.</p>
+      <section class="summary-grid" aria-label="Краткая карта урока">
+        <article class="summary-card">
+          <span>01</span>
+          <h2>Позиционирование</h2>
+          <p>
+            Лера пишет не “про обучение вообще”, а про то, каким должно быть
+            обучение, чтобы изменения и трансформации в сложных организациях
+            реально приживались.
+          </p>
+        </article>
+        <article class="summary-card">
+          <span>02</span>
+          <h2>Контентные территории</h2>
+          <p>
+            Transformation learning, adoption + marketing, manager enablement,
+            business-first L&D, measurement и отдельный голос Леры: умно,
+            точно, с высокими стандартами.
+          </p>
+        </article>
+        <article class="summary-card">
+          <span>03</span>
+          <h2>AI-workflow</h2>
+          <p>
+            ChatGPT как рабочая мастерская: стратегия, идеи, черновики,
+            редактура, снятие tone of voice и сбор контент-библиотеки без
+            вечного “сяду потом”.
+          </p>
+        </article>
+      </section>
+
+      <section class="lesson-body">
+        <article class="lesson-panel wide">
+          <p class="section-label">Суть урока</p>
+          <h2>Мы уточняли не “о чём писать”, а зачем Лере вообще LinkedIn</h2>
+          <p>
+            Цель на ближайшие месяцы: не стать блогером, а собрать рыночные
+            сигналы. Какие части экспертизы считываются? Кто реагирует? Какие
+            темы приближают Леру к senior L&D / transformation ролям на
+            американском рынке?
+          </p>
+          <ul class="clean-list">
+            <li>
+              Ядро: обучение как часть change / transformation, где люди должны
+              начать работать по-новому.
+            </li>
+            <li>
+              Результат: изменения поняты, приняты, поддержаны и используются
+              людьми, а не просто “курс запущен”.
+            </li>
+            <li>
+              Роль Леры: не production-level designer, а человек, который
+              помогает бизнесу провести людей через изменение.
+            </li>
+            <li>
+              Голос: rationally sharp, high standards, tactfully challenging,
+              без корпоративной ваты и без небезопасного хейта.
+            </li>
+          </ul>
+        </article>
+
+        <article class="lesson-panel dark">
+          <p class="section-label">Рабочая формулировка</p>
+          <h2>Что докручиваем</h2>
+          <p>
+            “I write about how learning helps complex organizations make change
+            stick: through adoption, behavior change, manager enablement, and
+            business performance.”
+          </p>
+          <p>
+            Формулировку ещё надо допилить. Да, именно допилить, потому что
+            “про трансформации” слишком широко, а “про процесс” звучит слабее,
+            чем реальный бизнес-результат.
+          </p>
+        </article>
+      </section>
+
+      <section class="homework" aria-labelledby="homework-title">
+        <div class="section-head">
+          <p class="section-label">Домашнее задание</p>
+          <h2 id="homework-title">Что Лере сделать после урока</h2>
         </div>
-        <div class="card">
-          <div class="card-title">Option 2</div>
-          <p class="english">I write about the messy space between training, behavior change, business performance, and enterprise transformation.</p>
+
+        <div class="task-list">
+          <label class="task-item">
+            <input type="checkbox" />
+            <span>
+              Создать отдельный проект в ChatGPT и положить туда материалы:
+              прошлые документы, урок, заметки, позиционирование, контентные
+              пиллары и примеры постов.
+            </span>
+          </label>
+          <label class="task-item">
+            <input type="checkbox" />
+            <span>
+              Покрутить позиционирование: где “change / transformation”, где
+              “learning”, где “business result”, и что звучит органично именно
+              для Леры.
+            </span>
+          </label>
+          <label class="task-item">
+            <input type="checkbox" />
+            <span>
+              Найти 3-5 людей “точки Б” на зарубежном LinkedIn: кто уже имеет
+              нужный вес, аудиторию и карьерную позицию через 10-15 лет.
+            </span>
+          </label>
+          <label class="task-item">
+            <input type="checkbox" />
+            <span>
+              Прислать Ире таблицу / список конкурентов и референсов, чтобы
+              разобрать их рубрики, паттерны, hooks и tone of voice.
+            </span>
+          </label>
+          <label class="task-item">
+            <input type="checkbox" />
+            <span>
+              Протестировать EasyGen by Ruben Hassid: посмотреть, какие
+              LinkedIn hooks и черновики он даёт, но не принимать их как финал.
+            </span>
+          </label>
+          <label class="task-item">
+            <input type="checkbox" />
+            <span>
+              Использовать 7 промптов из урока: стратегия, идеи, черновики,
+              редактура, hooks, pre-publish review, anonymized case post.
+            </span>
+          </label>
+          <label class="task-item">
+            <input type="checkbox" />
+            <span>
+              Выбрать 3 темы из first content batch или принести свои варианты,
+              если предложенные не попадают в нерв.
+            </span>
+          </label>
+          <label class="task-item">
+            <input type="checkbox" />
+            <span>
+              Завести привычку: 2 раза в день записывать голосом по 1-2 мысли
+              под контентные пиллары. Через месяц это уже не “нет идей”, а
+              приличная библиотека.
+            </span>
+          </label>
         </div>
-        <div class="card">
-          <div class="card-title">Option 3</div>
-          <p class="english">Learning for the messy middle of transformation.</p>
+      </section>
+
+      <section class="promised" aria-labelledby="promised-title">
+        <div>
+          <p class="section-label">Ира обещала дослать</p>
+          <h2 id="promised-title">Материалы, которые ещё прилетят</h2>
         </div>
-      </div>
-      <div class="grid two" style="margin-top:18px;">
-        <div class="card gold">
-          <div class="card-title">Recommended headline / tagline</div>
-          <p class="english">Learning for the messy middle of transformation.</p>
+
+        <div class="promise-list">
+          <article>
+            <h3>3 новых positioning frames</h3>
+            <p>
+              Варианты, где есть change / transformation и идея, что Лера
+              помогает людям перейти к новой работе так, чтобы бизнес получил
+              эффект.
+            </p>
+          </article>
+          <article>
+            <h3>Tone of voice prompt</h3>
+            <p>
+              Большой промпт, который вытащит голос Леры из её постов:
+              критическое мышление, высокие стандарты, тактичный challenge,
+              результат без корпоративного тумана.
+            </p>
+          </article>
+          <article>
+            <h3>Разбор референсов</h3>
+            <p>
+              После того как Лера пришлёт 3-5 людей “точки Б”, Ира посмотрит
+              их темы, рубрики, паттерны, hooks и то, что можно адаптировать.
+            </p>
+          </article>
+          <article>
+            <h3>LinkedIn / EasyGen материалы</h3>
+            <p>
+              Принципы Ruben Hassid / EasyGen и дополнительные материалы по
+              тому, как ускорять LinkedIn-контент без потери стратегии.
+            </p>
+          </article>
+          <article>
+            <h3>Путь от PowerPoint</h3>
+            <p>
+              Подборка сайтов с референсами презентаций, Open Source / Claude
+              Design-подходы, связка Gemini для визуального промпта и Codex для
+              сборки.
+            </p>
+          </article>
+          <article>
+            <h3>Карточка / реквизиты</h3>
+            <p>
+              Лера попросила прислать карточку, чтобы понять, куда отправить
+              оплату.
+            </p>
+          </article>
         </div>
-        <div class="card gold">
-          <div class="card-title">Recommended About frame</div>
-          <p class="english">I write about how learning helps complex organizations move from training activity to behavior change, adoption, and performance.</p>
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <section>
-      <div class="section-head">
-        <div class="number">15-25 min</div>
-        <h2>Content Pillars</h2>
-      </div>
-      <p>Пять рубрик достаточно. Больше на первом этапе не нужно: система должна помогать публиковать, а не красиво маскировать хаос.</p>
-      <div class="grid">
-        <div class="card">
-          <div class="card-title">Transformation Learning</div>
-          <p>Почему обучение в изменениях не работает, где ломается adoption, почему запуск training не равен изменению поведения.</p>
-        </div>
-        <div class="card">
-          <div class="card-title">Business-First L&D</div>
-          <p>Как L&D перестает быть order-taker и становится consulting partner: диагностика, вопросы, бизнес-проблема до курса.</p>
-        </div>
-        <div class="card">
-          <div class="card-title">Adoption + Marketing</div>
-          <p>Почему learning rollout похож на go-to-market: audience segmentation, messaging, friction reduction, internal campaign logic.</p>
-        </div>
-        <div class="card">
-          <div class="card-title">Manager Enablement</div>
-          <p>Почему тренинг без менеджерского слоя почти всегда слабый: reinforcement, manager kits, workflow support, transfer.</p>
-        </div>
-        <div class="card">
-          <div class="card-title">Measurement</div>
-          <p>Не completion rate, а behavior transfer, readiness, friction, risk reduced, performance evidence.</p>
-        </div>
-        <div class="card gold">
-          <div class="card-title">Voice Filter</div>
-          <p class="english">Disciplined contrarian: clear, commercially sharp, evidence-aware, slightly rebellious, never theatrical.</p>
-        </div>
-      </div>
-    </section>
+      <section class="quote-band">
+        <p>
+          “The goal is not more content. The goal is clearer market signal.”
+        </p>
+      </section>
+    </main>
 
-    <section>
-      <div class="section-head">
-        <div class="number">25-37 min</div>
-        <h2>AI Workflow</h2>
-      </div>
-      <div class="grid">
-        <div class="card">
-          <div class="card-title">ChatGPT / Claude</div>
-          <p>Стратегия, идеи, перепаковка старых мыслей, структура постов, редактура, проверка на generic AI voice.</p>
-        </div>
-        <div class="card">
-          <div class="card-title">EasyGen by Ruben Hassid</div>
-          <p>Быстрые LinkedIn drafts, hooks и вариации, если нужен creator-style acceleration. Использовать как ускоритель, не как стратегическую голову.</p>
-        </div>
-        <div class="card">
-          <div class="card-title">Perplexity</div>
-          <p>Research по рынку, трендам, данным, компаниям, role requirements и свежим industry signals.</p>
-        </div>
-        <div class="card">
-          <div class="card-title">Notion / Google Sheet</div>
-          <p>Контент-банк, backlog идей, посты по статусам, трекинг сигналов, выводы по темам.</p>
-        </div>
-        <div class="card">
-          <div class="card-title">LinkedIn Native Analytics</div>
-          <p>Базовая аналитика внутри LinkedIn: views, reactions, comments, reposts, profile views, follower growth. Это основной источник первичных сигналов, потому что LinkedIn показывает данные в своем контексте.</p>
-        </div>
-        <div class="card">
-          <div class="card-title">Claude / Codex for Analysis</div>
-          <p>Claude или Codex можно использовать как аналитика: загружать таблицу постов, комментарии, темы и метрики, а затем просить найти patterns, audience signals, strongest angles и next experiments.</p>
-        </div>
-        <div class="card">
-          <div class="card-title">Apify Actors</div>
-          <p>Apify можно использовать для более автоматического сбора публичных LinkedIn-данных: посты профилей, engagement, комментарии, конкурентные аккаунты. Важно: начинать с ручной аналитики, а автоматизацию подключать только когда понятно, какие данные действительно нужны.</p>
-        </div>
-        <div class="card gold">
-          <div class="card-title">Ruben Hassid framing</div>
-          <p class="english">I like Ruben Hassid’s approach because he treats LinkedIn as a repeatable AI-assisted content system, not as random inspiration. But we will adapt it. His model is more creator-growth oriented. Your model needs to be career-visibility oriented. So we use AI for speed, structure, hooks, and variations, but your strategic point of view must stay yours.</p>
-        </div>
-      </div>
-      <div class="script">
-        <div class="script-label">Say this</div>
-        <p>EasyGen can help you generate faster drafts and hooks, but we should not outsource your strategy to it. If AI owns the strategy, the output becomes a generic LinkedIn person with opinions. We need a senior L&D signal.</p>
-        <p>For analytics, we start with LinkedIn native signals and a simple tracking sheet. Then Claude or Codex can help us interpret patterns. Apify becomes useful later, when we want to collect public LinkedIn data at scale, compare competitors, or monitor specific profiles and topics.</p>
-      </div>
-    </section>
-
-    <section>
-      <div class="section-head">
-        <div class="number">37-52 min</div>
-        <h2>Prompt Library</h2>
-      </div>
-
-      <div class="card">
-        <div class="card-title">Prompt 1. Content Strategy</div>
-        <pre>You are my LinkedIn content strategist.
-
-My positioning:
-I write about the messy space between training, behavior change, business performance, and enterprise transformation.
-
-My audience:
-Senior L&amp;D leaders, Talent Development leaders, HR transformation leaders, change leaders, and recruiters in complex U.S. enterprises.
-
-My tone:
-Disciplined contrarian, business-minded, clear, slightly sharp, evidence-aware, not corporate-safe, not provocative for attention.
-
-Create 20 LinkedIn post ideas across these pillars:
-1. transformation learning
-2. business-first L&amp;D
-3. adoption + marketing
-4. manager enablement
-5. learning measurement
-
-For each idea, give:
-- post title
-- core argument
-- why my audience would care
-- best format: story, case breakdown, checklist, opinion, framework</pre>
-      </div>
-
-      <div class="card">
-        <div class="card-title">Prompt 2. From Rough Note to LinkedIn Post</div>
-        <pre>Turn this rough note into a LinkedIn post for a senior L&amp;D / transformation audience.
-
-Rules:
-- Write in English.
-- Keep the tone sharp but professional.
-- No hype.
-- No generic leadership clichés.
-- Start with a strong observation.
-- Then explain the business consequence.
-- Then give a practical alternative.
-- End with a thoughtful question, not engagement bait.
-
-My positioning:
-Learning for the messy middle of transformation.
-
-Rough note:
-[PASTE NOTE]</pre>
-      </div>
-
-      <div class="card">
-        <div class="card-title">Prompt 3. Post Formula</div>
-        <pre>Write a LinkedIn post using this structure:
-
-1. Sharp observation
-2. Why this matters in complex organizations
-3. What smart L&amp;D / transformation teams do instead
-4. One practical example
-5. Short closing thought
-
-Topic:
-[TOPIC]
-
-Audience:
-Senior L&amp;D, Talent Development, transformation, HR leaders.
-
-Tone:
-Disciplined contrarian. Clear, commercially sharp, adult, not theatrical.</pre>
-      </div>
-
-      <div class="card">
-        <div class="card-title">Prompt 4. Make It Less AI-Written</div>
-        <pre>Edit this LinkedIn post so it sounds less AI-generated.
-
-Keep:
-- strategic clarity
-- senior professional tone
-- specific business language
-
-Remove:
-- generic motivational phrasing
-- over-polished transitions
-- vague claims
-- hype words
-- cliché LinkedIn cadence
-
-Make it sound like a smart L&amp;D strategist with a real point of view.
-
-Post:
-[PASTE POST]</pre>
-      </div>
-
-      <div class="card">
-        <div class="card-title">Prompt 5. Hook Variations</div>
-        <pre>Give me 10 LinkedIn hooks for this idea.
-
-Topic:
-[TOPIC]
-
-My audience:
-Senior L&amp;D leaders, Talent Development leaders, HR transformation leaders.
-
-My voice:
-Business-minded, sharp, practical, slightly contrarian.
-
-Avoid:
-- “Here are 5 lessons”
-- “I used to think...”
-- fake vulnerability
-- viral bro tone
-- exaggerated claims</pre>
-      </div>
-
-      <div class="card">
-        <div class="card-title">Prompt 6. Pre-Publish Review</div>
-        <pre>Review this LinkedIn post before I publish.
-
-Score it from 1-10 on:
-1. clarity
-2. originality
-3. relevance to senior L&amp;D audience
-4. strength of point of view
-5. credibility
-6. risk of sounding generic or AI-written
-
-Then give:
-- what to cut
-- what to make more specific
-- a stronger opening
-- a stronger ending
-
-Post:
-[PASTE POST]</pre>
-      </div>
-
-      <div class="card">
-        <div class="card-title">Prompt 7. Anonymized Case Post</div>
-        <pre>Help me turn this work experience into an anonymized LinkedIn case post.
-
-Constraints:
-- Do not reveal company, industry-sensitive details, names, numbers, or confidential context.
-- Keep the business lesson.
-- Show my judgment and strategic thinking.
-- Make it relevant to L&amp;D / transformation leaders.
-
-Case notes:
-[PASTE CASE]
-
-Output:
-1. safe anonymized version
-2. LinkedIn post draft
-3. 3 alternative angles</pre>
-      </div>
-    </section>
-
-    <section>
-      <div class="section-head">
-        <div class="number">52-60 min</div>
-        <h2>First Content Batch</h2>
-      </div>
-      <p>Задача: выбрать 3 темы для первой пачки. Не обсуждать идеально ли это навсегда. Это тест, а не монумент.</p>
-      <div class="grid two">
-        <div class="card">
-          <ol>
-            <li>Why transformation training fails before launch.</li>
-            <li>Your training request may be a workflow problem.</li>
-            <li>Completion rate is not evidence of capability.</li>
-            <li>Learning adoption works like go-to-market.</li>
-            <li>If managers are not involved, your learning launch is unfinished.</li>
-            <li>Why “engaging training” is not enough in regulated environments.</li>
-          </ol>
-        </div>
-        <div class="card">
-          <ol start="7">
-            <li>Stop starting with content. Start with the business problem.</li>
-            <li>The hidden job of senior L&amp;D is translation.</li>
-            <li>Global programs fail for very local reasons.</li>
-            <li>AI will not save bad learning strategy.</li>
-            <li>The best learning solutions often do not look like training.</li>
-            <li>What my marketing background taught me about enterprise learning.</li>
-          </ol>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="section-head">
-        <div class="number">Homework</div>
-        <h2>After Lesson 1</h2>
-      </div>
-      <div class="grid two">
-        <div class="card">
-          <div class="card-title">Minimum execution</div>
-          <ol>
-            <li>Update LinkedIn headline and About section.</li>
-            <li>Generate 10 content ideas using Prompt 1.</li>
-            <li>Write 3 post drafts using Prompts 2-4.</li>
-            <li>Publish 1 post.</li>
-            <li>Leave 20 thoughtful comments under relevant L&amp;D / transformation posts.</li>
-          </ol>
-        </div>
-        <div class="card">
-          <div class="card-title">Signal tracking</div>
-          <p>После публикации фиксировать не только views, но и качество реакции: кто отреагировал, были ли profile views, connection requests, комментарии от нужной аудитории, какие темы стоит повторить.</p>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="section-head">
-        <div class="number">Tracker</div>
-        <h2>Signal Tracking Table</h2>
-      </div>
-      <table>
-        <thead>
-          <tr>
-            <th>Date</th>
-            <th>Pillar</th>
-            <th>Post angle</th>
-            <th>Format</th>
-            <th>Hook</th>
-            <th>Views</th>
-            <th>Comments</th>
-            <th>Saves</th>
-            <th>Relevant reactions</th>
-            <th>Profile views</th>
-            <th>New connections</th>
-            <th>Signal</th>
-            <th>Next action</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-          </tr>
-          <tr>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
-
-    <section>
-      <div class="section-head">
-        <div class="number">Closing</div>
-        <h2>What Valeria Should Remember</h2>
-      </div>
-      <div class="quote">
-        AI is not here to invent your expertise. It is here to extract it, structure it, pressure-test it, and help you publish consistently.
-      </div>
-      <div class="quote">
-        The goal is not more content. The goal is clearer market signal.
-      </div>
-    </section>
-
-    <div class="footer">
-      <p>Prepared as Lesson 1 material for Valeria. Working theme: AI-powered LinkedIn visibility for senior L&amp;D / transformation career positioning.</p>
-    </div>
-  </main>
-</body>
+    <div class="toast" role="status" aria-live="polite"></div>
+    <script src="./script.js"></script>
+  </body>
 </html>
