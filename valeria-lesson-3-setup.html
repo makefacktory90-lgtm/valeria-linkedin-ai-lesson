@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="VAL lesson 3 setup: skills, prompts and pillar-based content machine for LinkedIn visibility."
+    />
+    <title>VAL LinkedIn · Lesson 3 Setup</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <header class="portal-hero compact-hero">
+        <nav class="top-nav" aria-label="Навигация">
+          <a href="./index.html#lesson-3">Назад к порталу</a>
+          <a href="./valeria-v2-0.html">Val V2.0</a>
+          <a href="#skills">Skills</a>
+          <a href="#pillar-routing">Pillars</a>
+          <a href="#workflow-test">Test</a>
+        </nav>
+
+        <div class="hero-grid">
+          <div>
+            <p class="eyebrow">Ira&amp;Ai for VAL LinkedIn · Lesson 3</p>
+            <h1>Content Machine Setup</h1>
+            <p class="lead">
+              Заготовка к финальному занятию: какие слои ставим в Codex, какие
+              скиллы и промпты нужны, как машина работает по разным pillars и
+              что тестируем за час.
+            </p>
+          </div>
+
+          <aside class="north-star">
+            <span>Missing input</span>
+            <p>
+              Нам не хватает только финального Tone of Voice от Val: examples,
+              line edits, banned phrases and preferred rhythm.
+            </p>
+          </aside>
+        </div>
+      </header>
+
+      <section class="lesson current">
+        <div class="lesson-heading">
+          <p class="eyebrow">Goal</p>
+          <h2>Что должно быть собрано к концу третьего урока</h2>
+          <p>
+            Val уходит не с теорией про LinkedIn, а с рабочим weekly workflow:
+            найти тему, проверить ее на стратегию, сделать research, переписать
+            в свой голос, почистить AI, проверить факты и сохранить draft.
+          </p>
+        </div>
+
+        <div class="quote-band">
+          <p>Final machine</p>
+          <strong>
+            Topic Radar -> Deep Research -> Pillar Router -> Strategy Check ->
+            Voice Rewriter -> Humanizer -> De-AI Cleaner -> Fact-check ->
+            Draft Library.
+          </strong>
+        </div>
+      </section>
+
+      <section class="lesson" id="skills">
+        <div class="lesson-heading">
+          <p class="eyebrow">Skills and layers</p>
+          <h2>Что ставим / создаем в Codex</h2>
+          <p>
+            Здесь “skills” — это рабочие слои машины. Часть уже есть как
+            внешний GitHub skill, часть мы создаем как Val-specific prompts /
+            project instructions внутри ее Codex-папки.
+          </p>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Layer</th>
+                <th>Tool / skill</th>
+                <th>What it does</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Topic Radar</td>
+                <td>Val-specific prompt</td>
+                <td>Finds fresh post topics from pillars, people, market signals and recurring L&D / transformation tensions.</td>
+                <td>Prepare in lesson 3.</td>
+              </tr>
+              <tr>
+                <td>Search</td>
+                <td><a href="https://exa.ai/" target="_blank" rel="noreferrer">Exa</a></td>
+                <td>Finds sources, experts, reports, examples, field language and weak signals.</td>
+                <td>Already introduced.</td>
+              </tr>
+              <tr>
+                <td>Deep Research</td>
+                <td><a href="https://github.com/tonyazhuuki/deep-research-skill" target="_blank" rel="noreferrer">Deep Research skill</a></td>
+                <td>Turns one topic into a structured brief: sources, tensions, evidence, risks and angles.</td>
+                <td>Install / fork / adapt.</td>
+              </tr>
+              <tr>
+                <td>Pillar Router</td>
+                <td>Val-specific prompt</td>
+                <td>Routes each topic into Making Change Work, Making Complexity Usable or Creative Strategy for Change.</td>
+                <td>Create in lesson 3.</td>
+              </tr>
+              <tr>
+                <td>Strategy Check</td>
+                <td>Val-specific prompt</td>
+                <td>Checks positioning, audience, business relevance, learning mechanism and proof potential.</td>
+                <td>Create in lesson 3.</td>
+              </tr>
+              <tr>
+                <td>Voice Rewriter</td>
+                <td>Needs Val's final Tone of Voice</td>
+                <td>Rewrites draft into Val's strategic challenger voice using examples and banned phrases.</td>
+                <td>Needs weekend input.</td>
+              </tr>
+              <tr>
+                <td>Humanizer</td>
+                <td>Val-specific prompt</td>
+                <td>Adds lived observation, natural rhythm, field language and human reasoning.</td>
+                <td>Create in lesson 3.</td>
+              </tr>
+              <tr>
+                <td>De-AI Cleaner</td>
+                <td>Val-specific prompt</td>
+                <td>Removes generic LinkedIn structure, fake drama, guru cadence and corporate fluff.</td>
+                <td>Create in lesson 3.</td>
+              </tr>
+              <tr>
+                <td>Fact-check</td>
+                <td>Val-specific prompt + sources</td>
+                <td>Checks claims, numbers, source quality, overstatements and risky wording.</td>
+                <td>Create in lesson 3.</td>
+              </tr>
+              <tr>
+                <td>Draft Library</td>
+                <td>Google Drive / GitHub / local Codex folder</td>
+                <td>Stores research briefs, hooks, drafts, edits, source notes and publishing status.</td>
+                <td>Choose during setup.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="lesson" id="pillar-routing">
+        <div class="lesson-heading">
+          <p class="eyebrow">Pillar routing</p>
+          <h2>Как машина работает по разным pillars</h2>
+          <p>
+            Один и тот же workflow должен давать разные outputs по разным
+            territories. Иначе опять получим универсальную AI-мясорубку, а нам
+            нужна нормальная профессиональная машина.
+          </p>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Pillar</th>
+                <th>Search for</th>
+                <th>Best outputs</th>
+                <th>Quality check</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Making Change Work</td>
+                <td>Post-launch adoption friction, workarounds, manager enablement, behavior change, rollout failures.</td>
+                <td>Field note, case-style post, diagnostic checklist, manager support framework.</td>
+                <td>Does this show what learning teams need to understand about real change behavior?</td>
+              </tr>
+              <tr>
+                <td>Making Complexity Usable</td>
+                <td>Performance support, job aids, decision trees, workflow prompts, complexity-to-action examples.</td>
+                <td>Framework, checklist, before/after simplification, practical design principle.</td>
+                <td>Does this turn complexity into action without dumbing it down?</td>
+              </tr>
+              <tr>
+                <td>Creative Strategy for Change</td>
+                <td>Positioning, internal comms, product launch thinking, Big Idea, message hierarchy, relevance.</td>
+                <td>Contrarian opinion, rollout narrative, positioning breakdown, creative frame.</td>
+                <td>Does this connect creative strategy back to learning and adoption?</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="lesson" id="workflow-test">
+        <div class="lesson-heading">
+          <p class="eyebrow">One-hour test</p>
+          <h2>Что тестируем на уроке</h2>
+        </div>
+
+        <div class="task-list">
+          <label class="task-item"><input type="checkbox" /><span>Install / open Deep Research and Exa setup.</span></label>
+          <label class="task-item"><input type="checkbox" /><span>Create Val project folder: strategy, voice, pillars, references, prompts, drafts.</span></label>
+          <label class="task-item"><input type="checkbox" /><span>Run Topic Radar on one pillar.</span></label>
+          <label class="task-item"><input type="checkbox" /><span>Run Deep Research on one selected topic.</span></label>
+          <label class="task-item"><input type="checkbox" /><span>Route topic through strategy check and pillar check.</span></label>
+          <label class="task-item"><input type="checkbox" /><span>Rewrite one draft through voice / humanizer / de-AI / fact-check.</span></label>
+          <label class="task-item"><input type="checkbox" /><span>Save the output into Draft Library with status: idea, researched, drafted, edited, ready.</span></label>
+        </div>
+      </section>
+
+      <section class="lesson">
+        <div class="lesson-heading">
+          <p class="eyebrow">What Val brings</p>
+          <h2>Что нужно от Val до урока</h2>
+        </div>
+
+        <div class="task-list">
+          <label class="task-item"><input type="checkbox" /><span>Final Tone of Voice feedback: good / bad / banned / rewrite examples.</span></label>
+          <label class="task-item"><input type="checkbox" /><span>1-2 topics she wants to test first.</span></label>
+          <label class="task-item"><input type="checkbox" /><span>Any preferred place for Draft Library: Google Drive, GitHub or local folder.</span></label>
+        </div>
+      </section>
+    </main>
+
+    <div class="toast" role="status" aria-live="polite"></div>
+    <script src="./script.js"></script>
+  </body>
+</html>
