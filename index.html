@@ -295,8 +295,8 @@
           <h3>Content Machine V1</h3>
           <p>
             Финальная заготовка под третий урок: final tone of voice, Val Deep
-            Research prompt, pipeline Search -> Voice -> Humanizer -> De-AI ->
-            Do-ification -> Drafts и тест на 2 дня.
+            Research prompt, approval map and pipeline Search -> Strategy ->
+            Voice -> Hook -> Humanizer -> De-AI -> Final decision.
           </p>
           <a class="primary-action inline-action" href="./valeria-content-machine-v1-2026-05-29.html">
             Открыть машину
@@ -661,14 +661,10 @@ Post:
         <div class="homework">
           <h3>Homework after lesson 2</h3>
           <div class="task-list">
-            <label class="task-item"><input type="checkbox" /><span>Опубликовать или подготовить к публикации 2 поста из урока: один про go-live, второй про clarity / complexity.</span></label>
-            <label class="task-item"><input type="checkbox" /><span>Выбрать 6 тем из backlog на ближайшие 3 недели: 2 из каждого content pillar.</span></label>
-            <label class="task-item"><input type="checkbox" /><span>Сделать 1 ручной <a href="https://github.com/tonyazhuuki/deep-research-skill" target="_blank" rel="noreferrer">Deep Research</a> brief в Codex по теме будущего поста и сохранить вывод.</span></label>
-            <label class="task-item"><input type="checkbox" /><span>1-2 раза в неделю запускать поиск: <a href="https://exa.ai/" target="_blank" rel="noreferrer">Exa</a> -> sources -> <a href="https://github.com/tonyazhuuki/deep-research-skill" target="_blank" rel="noreferrer">Deep Research</a> -> post angle -> draft.</span></label>
-            <label class="task-item"><input type="checkbox" /><span>Собрать voice library: 10 фраз, которые звучат как Val, и 10 фраз, которые точно generic / not Val.</span></label>
-            <label class="task-item"><input type="checkbox" /><span>Для каждой плохой фразы написать запрет: “не пиши короткими рублеными фразами”, “не звучать как LinkedIn guru”, “не делать fake drama”.</span></label>
-            <label class="task-item"><input type="checkbox" /><span>Выбрать 3 фразы у референсов, которые нравятся по механике, и объяснить: что именно забираем, а что не копируем.</span></label>
-            <label class="task-item"><input type="checkbox" /><span>Сохранять все черновики, хуки и research briefs в одном месте, чтобы на уроке 3 собрать из этого машину.</span></label>
+            <label class="task-item"><input type="checkbox" /><span>Поставить OK или прислать правки по стратегии: positioning, audience, 3-month / 6-month visibility direction.</span></label>
+            <label class="task-item"><input type="checkbox" /><span>Поставить OK или прислать правки по финальным content pillars.</span></label>
+            <label class="task-item"><input type="checkbox" /><span>Поставить OK или прислать финальный Tone of Voice своей версией.</span></label>
+            <label class="task-item"><input type="checkbox" /><span>Поставить OK или правки по forked <a href="./valeria-research-skill.html">Val Research Skill</a>: authors, pillars, search logic, learning mechanism.</span></label>
           </div>
         </div>
       </section>
@@ -678,10 +674,10 @@ Post:
           <p class="eyebrow">Урок 3 · next</p>
           <h2>Val Visibility Machine</h2>
           <p>
-            На третьем уроке превращаем ручной процесс из урока 2 в систему:
-            поиск, голос Леры, проверка на стратегию, hook bank и финальная
-            редактура. Цель — собрать личную машину видимости, которую Лера
-            сможет повторять каждую неделю.
+            На третьем уроке собираем финальную машину только из подтвержденных
+            блоков. Если Strategy / Pillars / Tone of Voice / Research Skill не
+            получили OK от Val, сначала правим их, потому что без них машина
+            будет собрана на песке, а это, простите, цирк с ноутбуком.
           </p>
         </div>
 
@@ -706,13 +702,59 @@ Post:
         </div>
 
         <div class="homework">
-          <h3>Что принесём в урок 3</h3>
+          <h3>Что должно быть подтверждено до урока 3</h3>
+          <p>
+            Красные блоки ждут OK от Val. Если она ставит галочку, блок
+            становится базой машины. Если не окей — Val быстро правит и
+            присылает финальную версию до понедельника.
+          </p>
+          <div class="status-grid approval-grid">
+            <article class="status-card approval-card is-review">
+              <span class="status-badge review">needs Val OK</span>
+              <strong>Strategy</strong>
+              <p>Positioning, audience, visibility goal and strategic direction.</p>
+              <label><input type="checkbox" /> OK from Val</label>
+            </article>
+            <article class="status-card approval-card is-review">
+              <span class="status-badge review">needs Val OK</span>
+              <strong>Content pillars</strong>
+              <p>Three final pillars and their learning / adoption angle.</p>
+              <label><input type="checkbox" /> OK from Val</label>
+            </article>
+            <article class="status-card approval-card is-review">
+              <span class="status-badge review">needs Val OK</span>
+              <strong>Tone of Voice</strong>
+              <p>If not OK, Val forks the current voice and sends the final version.</p>
+              <label><input type="checkbox" /> OK from Val</label>
+            </article>
+            <article class="status-card approval-card is-review">
+              <span class="status-badge review">needs Val OK</span>
+              <strong>Val Research Skill</strong>
+              <p>Forked Deep Research skill with Val's authors, pillars and learning mechanism.</p>
+              <label><input type="checkbox" /> OK from Val</label>
+            </article>
+            <article class="status-card approval-card is-ready">
+              <span class="status-badge ready">ready</span>
+              <strong>Humanizer</strong>
+              <p>We install it. No approval needed.</p>
+              <label><input type="checkbox" checked /> Ready</label>
+            </article>
+            <article class="status-card approval-card is-ready">
+              <span class="status-badge ready">ready</span>
+              <strong>De-AI cleaner</strong>
+              <p>We install it. No approval needed.</p>
+              <label><input type="checkbox" checked /> Ready</label>
+            </article>
+          </div>
+        </div>
+
+        <div class="homework">
+          <h3>Минимальная домашка перед понедельником</h3>
           <div class="task-list">
-            <label class="task-item"><input type="checkbox" /><span>2-3 research briefs, сделанные руками после урока 2.</span></label>
-            <label class="task-item"><input type="checkbox" /><span>3-5 черновиков постов или rough notes.</span></label>
-            <label class="task-item"><input type="checkbox" /><span>Список hooks, которые понравились / не понравились после ручного теста черновиков.</span></label>
-            <label class="task-item"><input type="checkbox" /><span>Voice library: примеры фраз “sounds like Val”, “not Val”, “too generic”, “good idea, bad wording”.</span></label>
-            <label class="task-item"><input type="checkbox" /><span>Первые наблюдения: какие темы легче писать, какие дают больше профессионального сигнала.</span></label>
+            <label class="task-item"><input type="checkbox" /><span>OK / правки по стратегии.</span></label>
+            <label class="task-item"><input type="checkbox" /><span>OK / правки по content pillars.</span></label>
+            <label class="task-item"><input type="checkbox" /><span>OK / финальная версия Tone of Voice.</span></label>
+            <label class="task-item"><input type="checkbox" /><span>OK / правки по Val Research Skill.</span></label>
           </div>
         </div>
       </section>

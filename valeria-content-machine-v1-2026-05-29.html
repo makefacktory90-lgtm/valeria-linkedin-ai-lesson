@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="VAL content machine V1: финальный tone of voice, content pillars, кастомный Deep Research prompt и пайплайн Search -> Strategy -> Voice -> Humanizer -> De-AI -> Do-ification -> Drafts."
+      content="VAL content machine V1: финальный tone of voice, content pillars, кастомный Deep Research prompt и пайплайн Search -> Strategy -> Voice -> Hook -> Final decision."
     />
     <title>VAL LinkedIn · Content Machine V1</title>
     <link rel="stylesheet" href="./styles.css" />
@@ -34,8 +34,7 @@
             <p class="lead">
               Рабочая заготовка для последнего занятия: как Val будет искать
               темы, собирать research, переписывать в свой voice, чистить AI,
-              превращать мысль в действие и складывать черновики в повторяемую
-              систему.
+              выбирать hook direction и принимать финальное решение.
             </p>
           </div>
 
@@ -65,7 +64,7 @@
           <article class="status-card approval-card is-review">
             <span class="status-badge review">needs Val OK</span>
             <strong>Strategic basis</strong>
-            <p>Positioning, 10% message, audience, territory and 3-month visibility plan.</p>
+            <p>Positioning, 10% message, audience, territory and visibility plan.</p>
             <label><input type="checkbox" /> OK from Val</label>
           </article>
           <article class="status-card approval-card is-review">
@@ -80,22 +79,22 @@
             <p>Making Change Work, Making Complexity Usable, Creative Strategy for Change.</p>
             <label><input type="checkbox" /> OK from Val</label>
           </article>
-          <article class="status-card approval-card is-ready">
-            <span class="status-badge ready">ready</span>
-            <strong>Topic search</strong>
-            <p>Topic radar worked: themes are clear enough to connect to research and drafts.</p>
-            <label><input type="checkbox" checked /> Ready</label>
-          </article>
-          <article class="status-card approval-card is-ready">
-            <span class="status-badge ready">ready</span>
+          <article class="status-card approval-card is-review">
+            <span class="status-badge review">needs Val OK</span>
             <strong>Val Research Skill</strong>
-            <p>Deep Research fork now includes Val's authors, pillars, topics and learning mechanism.</p>
+            <p>Forked Deep Research skill with Val's authors, pillars, topics and learning mechanism.</p>
+            <label><input type="checkbox" /> OK from Val</label>
+          </article>
+          <article class="status-card approval-card is-ready">
+            <span class="status-badge ready">ready</span>
+            <strong>Humanizer</strong>
+            <p>We install it. No approval needed.</p>
             <label><input type="checkbox" checked /> Ready</label>
           </article>
           <article class="status-card approval-card is-ready">
             <span class="status-badge ready">ready</span>
-            <strong>Text machine</strong>
-            <p>Humanizer, De-AI and Do-ification are ready to plug into the Monday flow.</p>
+            <strong>De-AI cleaner</strong>
+            <p>We install it. No approval needed.</p>
             <label><input type="checkbox" checked /> Ready</label>
           </article>
         </div>
@@ -103,9 +102,9 @@
         <div class="quote-band">
           <p>Monday condition</p>
           <strong>
-            If the red blocks are OK, Monday is machine setup. If something is
-            not OK, Val edits that block first, then we build the flow around the
-            corrected version.
+            If Strategy, Pillars, Tone of Voice and Val Research Skill are OK,
+            Monday is machine setup. If something is not OK, Val edits that
+            block first, then we build the flow around the corrected version.
           </strong>
         </div>
       </section>
@@ -208,10 +207,8 @@ If the answer is weak, the topic needs a new angle before it becomes a LinkedIn 
 
         <div class="homework">
           <h3>What Val sends before Monday</h3>
-          <pre><code>1. 3-5 examples that sound close to me.
-2. 3-5 examples that do not sound like me, if useful.
-3. Phrases / structures the AI should stop using.
-4. One stronger version of my Tone of Voice in my own words.
+          <pre><code>1. OK if this Tone of Voice is correct.
+2. If it is not correct, fork this version and send the final Tone of Voice in your own words.
 
 We use this as the final voice layer in the Monday machine.</code></pre>
         </div>
@@ -460,10 +457,11 @@ Return:
       <section class="lesson" id="pipeline">
         <div class="lesson-heading">
           <p class="eyebrow">Monday pipeline</p>
-          <h2>Search -> Strategy -> Voice -> Humanizer -> De-AI -> Do-ification -> Drafts</h2>
+          <h2>Search -> Strategy -> Voice -> Hook -> Final decision</h2>
           <p>
-            Это финальная точка менторства: не “мы поговорили про LinkedIn”, а
-            у Леры есть процесс, который можно повторять каждую неделю.
+            Это карта финальной машины. Humanizer and De-AI cleaner ставятся
+            как технические фильтры внутри редакторского слоя; отдельного OK от
+            Val для них не нужно.
           </p>
         </div>
 
@@ -479,46 +477,40 @@ Return:
             </thead>
             <tbody>
               <tr>
-                <td>1 · Search</td>
-                <td><span class="status-badge ready">ready</span> Exa + Deep Research по одной теме или одному pillar.</td>
-                <td>Research brief, sources, tensions, examples, post angles.</td>
-                <td>Есть минимум 3 credible sources and one real business tension.</td>
+                <td>1 · Search layer</td>
+                <td><span class="status-badge review">needs OK</span> Exa / Deep Research собирают источники, field language, tensions, examples and weak signals.</td>
+                <td>Source and angle input for the agent.</td>
+                <td>Val Research Skill approved by Val.</td>
               </tr>
               <tr>
-                <td>2 · Strategy check</td>
-                <td><span class="status-badge review">needs OK</span> Проверка на positioning, pillar fit, audience, learning mechanism.</td>
-                <td>Green / yellow / red topic decision.</td>
-                <td>Если нет learning mechanism, тема не идет в draft.</td>
+                <td>2 · Strategy layer</td>
+                <td><span class="status-badge review">needs OK</span> Каждая тема сверяется с positioning, three pillars и six-month visibility goal.</td>
+                <td>Strategic go / no-go.</td>
+                <td>Strategy and pillars approved by Val.</td>
               </tr>
               <tr>
-                <td>3 · Voice rewrite</td>
-                <td><span class="status-badge review">needs OK</span> Черновик переписывается в Val voice: sharp, practical, evidence-aware.</td>
-                <td>Draft 1 in Val direction.</td>
-                <td>Звучит как learning strategist with edge, not generic LinkedIn.</td>
+                <td>3 · Voice layer</td>
+                <td><span class="status-badge review">needs OK</span> Voice filter проверяет, звучит ли текст как Val: disciplined contrarian, practical, evidence-aware.</td>
+                <td>Voice-correct direction.</td>
+                <td>Final Tone of Voice approved by Val.</td>
               </tr>
               <tr>
-                <td>4 · Humanizer</td>
-                <td><span class="status-badge ready">ready</span> Добавляем живую логику, наблюдение, естественный rhythm, field language.</td>
-                <td>Draft 2 with human reasoning.</td>
-                <td>Есть lived observation, not just polished explanation.</td>
+                <td>4 · Hook layer</td>
+                <td>Подбираем хуки под три пиллара, но не превращаем текст в engagement bait.</td>
+                <td>Hook options.</td>
+                <td>Hook supports the point, not cheap engagement.</td>
               </tr>
               <tr>
-                <td>5 · De-AI</td>
-                <td><span class="status-badge ready">ready</span> Убираем AI structure, fake drama, guru cadence, over-clean transitions.</td>
-                <td>Draft 3, less synthetic.</td>
-                <td>Нет “In today's fast-paced world”, empty lists, fake cliffhangers.</td>
+                <td>5 · Editing filters</td>
+                <td><span class="status-badge ready">ready</span> Humanizer + De-AI cleaner убирают synthetic tone and generic AI structure.</td>
+                <td>Cleaner professional version.</td>
+                <td>No separate approval needed.</td>
               </tr>
               <tr>
-                <td>6 · Do-ification</td>
-                <td><span class="status-badge ready">ready</span> Превращаем мысль в полезное действие: diagnostic question, design decision, checklist, next step.</td>
-                <td>Action-oriented draft.</td>
-                <td>После текста понятно, что с этим делать в learning / transformation work.</td>
-              </tr>
-              <tr>
-                <td>7 · Drafts folder</td>
-                <td>Сохраняем финальный черновик, research brief, hooks and notes.</td>
-                <td>Drafts library for publishing and voice training.</td>
-                <td>Можно вернуться через месяц и понять, почему текст написан именно так.</td>
+                <td>6 · Final layer</td>
+                <td>Агент предлагает пост, carousel angle или featured asset.</td>
+                <td>Final options.</td>
+                <td>Val makes the final decision.</td>
               </tr>
             </tbody>
           </table>
@@ -530,20 +522,16 @@ Return:
           <p class="eyebrow">Before Monday</p>
           <h2>Что тестируем до понедельника</h2>
           <p>
-            Задача не “написать идеально”. Задача быстро проверить, какие
-            темы, источники и voice examples можно ставить в финальную машинку.
+            Это не задание на тексты. Это подтверждение базы. Если база
+            подтверждена, в понедельник собираем content machine.
           </p>
         </div>
 
         <div class="task-list">
-          <label class="task-item"><input type="checkbox" /><span>Поставить OK или правки на strategic basis: positioning, pillars, 3-month visibility plan.</span></label>
-          <label class="task-item"><input type="checkbox" /><span>Поставить OK или правки на Tone of Voice.</span></label>
-          <label class="task-item"><input type="checkbox" /><span>Дать хорошие voice examples: 3-5 фрагментов, которые звучат близко к Val.</span></label>
-          <label class="task-item"><input type="checkbox" /><span>Выбрать 2 темы: одну из Making Change Work, одну из Making Complexity Usable.</span></label>
-          <label class="task-item"><input type="checkbox" /><span>Запустить Val Deep Research Brief по каждой теме.</span></label>
-          <label class="task-item"><input type="checkbox" /><span>Отметить 5 источников / мыслей, которые реально хочется использовать.</span></label>
-          <label class="task-item"><input type="checkbox" /><span>Отметить фразы, которые звучат как Val, и фразы, которые AI должен больше не использовать.</span></label>
-          <label class="task-item"><input type="checkbox" /><span>Принести 2 rough drafts или хотя бы 2 post angles на последний урок.</span></label>
+          <label class="task-item"><input type="checkbox" /><span>OK / правки по стратегии.</span></label>
+          <label class="task-item"><input type="checkbox" /><span>OK / правки по content pillars.</span></label>
+          <label class="task-item"><input type="checkbox" /><span>OK / финальная версия Tone of Voice.</span></label>
+          <label class="task-item"><input type="checkbox" /><span>OK / правки по Val Research Skill.</span></label>
         </div>
       </section>
     </main>

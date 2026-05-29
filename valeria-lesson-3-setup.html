@@ -34,10 +34,11 @@
           </div>
 
           <aside class="north-star">
-            <span>Missing input</span>
+            <span>Before Monday</span>
             <p>
-              Нам не хватает только финального Tone of Voice от Val: examples,
-              line edits, banned phrases and preferred rhythm.
+              Нам нужен OK от Val на Strategy, Content Pillars, Tone of Voice
+              and Val Research Skill. Без этого в понедельник не собираем
+              финальную машину, а сначала правим базу.
             </p>
           </aside>
         </div>
@@ -48,42 +49,55 @@
           <p class="eyebrow">Goal</p>
           <h2>Что должно быть собрано к концу третьего урока</h2>
           <p>
-            Val уходит не с теорией про LinkedIn, а с рабочим weekly workflow:
-            найти тему, проверить ее на стратегию, сделать research, переписать
-            в свой голос, почистить AI, сделать текст практичным и сохранить
-            draft.
+            Val уходит не с теорией про LinkedIn, а с понятной content machine.
+            Но машина собирается только из подтвержденных блоков: strategy,
+            content pillars, Tone of Voice and forked research skill.
           </p>
         </div>
 
         <div class="quote-band">
-          <p>Final machine</p>
+          <p>Карта машины</p>
           <strong>
-            Topic Radar -> Deep Research -> Pillar Router -> Strategy Check ->
-            Voice Rewriter -> Humanizer -> De-AI Cleaner -> Do-ification ->
-            Draft Library.
+            Search -> Strategy -> Voice -> Hook -> Humanizer -> De-AI -> Final decision.
           </strong>
         </div>
 
-        <div class="status-grid">
-          <article class="status-card is-ready">
-            <span class="status-badge ready">green</span>
-            <strong>Exa + Deep Research</strong>
-            <p>Almost ready. Research is adapted to Val's authors, pillars and themes.</p>
+        <div class="status-grid approval-grid">
+          <article class="status-card approval-card is-review">
+            <span class="status-badge review">needs Val OK</span>
+            <strong>Strategy</strong>
+            <p>Positioning, visibility goal and strategic direction.</p>
+            <label><input type="checkbox" /> OK from Val</label>
           </article>
-          <article class="status-card is-review">
-            <span class="status-badge review">red</span>
-            <strong>Strategic search basis</strong>
-            <p>Positioning, strategy, pillars and topic logic need Val's OK.</p>
+          <article class="status-card approval-card is-review">
+            <span class="status-badge review">needs Val OK</span>
+            <strong>Content pillars</strong>
+            <p>Three pillars and their learning / adoption angle.</p>
+            <label><input type="checkbox" /> OK from Val</label>
           </article>
-          <article class="status-card is-review">
-            <span class="status-badge review">red</span>
+          <article class="status-card approval-card is-review">
+            <span class="status-badge review">needs Val OK</span>
             <strong>Tone of Voice</strong>
-            <p>Needs final examples: good, bad, banned, rewrite style.</p>
+            <p>If not OK, Val forks the current version and sends the final voice.</p>
+            <label><input type="checkbox" /> OK from Val</label>
           </article>
-          <article class="status-card is-ready">
-            <span class="status-badge ready">green</span>
-            <strong>Humanizer + De-AI + Do-ification</strong>
-            <p>Ready editing layers. We adapt them to Val's voice on Monday.</p>
+          <article class="status-card approval-card is-review">
+            <span class="status-badge review">needs Val OK</span>
+            <strong>Val Research Skill</strong>
+            <p>Forked Deep Research skill with Val's authors, pillars and learning mechanism.</p>
+            <label><input type="checkbox" /> OK from Val</label>
+          </article>
+          <article class="status-card approval-card is-ready">
+            <span class="status-badge ready">ready</span>
+            <strong>Humanizer</strong>
+            <p>We install it. No approval needed.</p>
+            <label><input type="checkbox" checked /> Ready</label>
+          </article>
+          <article class="status-card approval-card is-ready">
+            <span class="status-badge ready">ready</span>
+            <strong>De-AI cleaner</strong>
+            <p>We install it. No approval needed.</p>
+            <label><input type="checkbox" checked /> Ready</label>
           </article>
         </div>
       </section>
@@ -91,11 +105,10 @@
       <section class="lesson" id="skills">
         <div class="lesson-heading">
           <p class="eyebrow">Skills and layers</p>
-          <h2>Что ставим / создаем в Codex</h2>
+          <h2>Из чего состоит финальная машина</h2>
           <p>
-            Здесь “skills” — это рабочие слои машины. Часть уже есть как
-            внешний GitHub skill, часть мы создаем как Val-specific prompts /
-            project instructions внутри ее Codex-папки.
+            Это не список всего на свете. Это только те слои, из которых будет
+            состоять Monday setup.
           </p>
         </div>
 
@@ -111,64 +124,46 @@
             </thead>
             <tbody>
               <tr>
-                <td>Topic Radar</td>
+                <td>Search layer</td>
+                <td><a href="https://exa.ai/" target="_blank" rel="noreferrer">Exa</a> / <a href="./valeria-research-skill.html">Val Research Skill</a></td>
+                <td>Collects sources, field language, tensions, examples and weak signals.</td>
+                <td><span class="status-badge review">needs Val OK</span> forked research skill.</td>
+              </tr>
+              <tr>
+                <td>Strategy layer</td>
+                <td>Val strategy + content pillars</td>
+                <td>Checks each topic against positioning, three pillars and six-month visibility goal.</td>
+                <td><span class="status-badge review">needs Val OK</span> strategy and pillars.</td>
+              </tr>
+              <tr>
+                <td>Voice layer</td>
+                <td>Final Tone of Voice</td>
+                <td>Checks whether the text sounds like Val: disciplined contrarian, practical, evidence-aware.</td>
+                <td><span class="status-badge review">needs Val OK</span> final voice.</td>
+              </tr>
+              <tr>
+                <td>Hook layer</td>
                 <td>Val-specific prompt</td>
-                <td>Finds fresh post topics from pillars, people, market signals and recurring L&D / transformation tensions.</td>
-                <td>Prepare in lesson 3.</td>
-              </tr>
-              <tr>
-                <td>Search</td>
-                <td><a href="https://exa.ai/" target="_blank" rel="noreferrer">Exa</a></td>
-                <td>Finds sources, experts, reports, examples, field language and weak signals.</td>
-                <td>Already introduced.</td>
-              </tr>
-              <tr>
-                <td>Deep Research</td>
-                <td><a href="./valeria-research-skill.html">Val Research Skill</a> + <a href="https://github.com/tonyazhuuki/deep-research-skill" target="_blank" rel="noreferrer">Deep Research</a></td>
-                <td>Turns one topic into a structured brief: sources, tensions, evidence, risks and angles.</td>
-                <td><span class="status-badge ready">green</span> adapted.</td>
-              </tr>
-              <tr>
-                <td>Pillar Router</td>
-                <td>Val-specific prompt</td>
-                <td>Routes each topic into Making Change Work, Making Complexity Usable or Creative Strategy for Change.</td>
-                <td><span class="status-badge review">red</span> needs Val's strategic OK.</td>
-              </tr>
-              <tr>
-                <td>Strategy Check</td>
-                <td>Val-specific prompt</td>
-                <td>Checks positioning, audience, business relevance, learning mechanism and proof potential.</td>
-                <td><span class="status-badge review">red</span> needs Val's OK.</td>
-              </tr>
-              <tr>
-                <td>Voice Rewriter</td>
-                <td>Needs Val's final Tone of Voice</td>
-                <td>Rewrites draft into Val's strategic challenger voice using examples and banned phrases.</td>
-                <td><span class="status-badge review">red</span> needs weekend input.</td>
+                <td>Selects hooks for three pillars without turning the text into engagement bait.</td>
+                <td>Build on Monday after strategy and voice OK.</td>
               </tr>
               <tr>
                 <td>Humanizer</td>
                 <td>Adapted from humanize layer</td>
                 <td>Adds lived observation, natural rhythm, field language and human reasoning.</td>
-                <td><span class="status-badge ready">green</span> ready.</td>
+                <td><span class="status-badge ready">ready</span> install.</td>
               </tr>
               <tr>
                 <td>De-AI Cleaner</td>
                 <td>Adapted from De-AI layer</td>
                 <td>Removes generic LinkedIn structure, fake drama, guru cadence and corporate fluff.</td>
-                <td><span class="status-badge ready">green</span> ready.</td>
+                <td><span class="status-badge ready">ready</span> install.</td>
               </tr>
               <tr>
-                <td>Do-ification</td>
-                <td>Val-specific prompt</td>
-                <td>Turns insight into a useful action: diagnostic question, design decision, checklist or next step.</td>
-                <td><span class="status-badge ready">green</span> ready.</td>
-              </tr>
-              <tr>
-                <td>Draft Library</td>
-                <td>Google Drive / GitHub / local Codex folder</td>
-                <td>Stores research briefs, hooks, drafts, edits, source notes and publishing status.</td>
-                <td>Choose during setup.</td>
+                <td>Final layer</td>
+                <td>Agent + Val decision</td>
+                <td>Agent offers post, carousel angle or featured asset. Val makes the final decision.</td>
+                <td>Build on Monday.</td>
               </tr>
             </tbody>
           </table>
@@ -177,46 +172,20 @@
 
       <section class="lesson" id="pillar-routing">
         <div class="lesson-heading">
-          <p class="eyebrow">Pillar routing</p>
-          <h2>Как машина работает по разным pillars</h2>
+          <p class="eyebrow">Approval dependency</p>
+          <h2>Что блокирует сборку машины</h2>
           <p>
-            Один и тот же workflow должен давать разные outputs по разным
-            territories. Иначе опять получим универсальную AI-мясорубку, а нам
-            нужна нормальная профессиональная машина.
+            Пиллары, стратегия и voice не являются “приятными документами”.
+            Это настройки машины. Если они не подтверждены, search, hooks and
+            final output будут работать не в ту сторону.
           </p>
         </div>
 
-        <div class="table-wrap">
-          <table>
-            <thead>
-              <tr>
-                <th>Pillar</th>
-                <th>Search for</th>
-                <th>Best outputs</th>
-                <th>Quality check</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Making Change Work</td>
-                <td>Post-launch adoption friction, workarounds, manager enablement, behavior change, rollout failures.</td>
-                <td>Field note, case-style post, diagnostic checklist, manager support framework.</td>
-                <td>Does this show what learning teams need to understand about real change behavior?</td>
-              </tr>
-              <tr>
-                <td>Making Complexity Usable</td>
-                <td>Performance support, job aids, decision trees, workflow prompts, complexity-to-action examples.</td>
-                <td>Framework, checklist, before/after simplification, practical design principle.</td>
-                <td>Does this turn complexity into action without dumbing it down?</td>
-              </tr>
-              <tr>
-                <td>Creative Strategy for Change</td>
-                <td>Positioning, internal comms, product launch thinking, Big Idea, message hierarchy, relevance.</td>
-                <td>Contrarian opinion, rollout narrative, positioning breakdown, creative frame.</td>
-                <td>Does this connect creative strategy back to learning and adoption?</td>
-              </tr>
-            </tbody>
-          </table>
+        <div class="quote-band">
+          <p>Simple rule</p>
+          <strong>
+            OK from Val = build the machine. No OK = fix the base first.
+          </strong>
         </div>
       </section>
 
@@ -227,26 +196,25 @@
         </div>
 
         <div class="task-list">
-          <label class="task-item"><input type="checkbox" /><span>Install / open Deep Research and Exa setup.</span></label>
-          <label class="task-item"><input type="checkbox" /><span>Create Val project folder: strategy, voice, pillars, references, prompts, drafts.</span></label>
-          <label class="task-item"><input type="checkbox" /><span>Run Topic Radar on one pillar.</span></label>
-          <label class="task-item"><input type="checkbox" /><span>Run Deep Research on one selected topic.</span></label>
-          <label class="task-item"><input type="checkbox" /><span>Route topic through strategy check and pillar check.</span></label>
-          <label class="task-item"><input type="checkbox" /><span>Rewrite one draft through voice / humanizer / de-AI / do-ification.</span></label>
-          <label class="task-item"><input type="checkbox" /><span>Save the output into Draft Library with status: idea, researched, drafted, edited, ready.</span></label>
+          <label class="task-item"><input type="checkbox" /><span>Confirm red blocks: Strategy, Content Pillars, Tone of Voice, Val Research Skill.</span></label>
+          <label class="task-item"><input type="checkbox" /><span>Install / open Exa + forked Val Research Skill.</span></label>
+          <label class="task-item"><input type="checkbox" /><span>Install Humanizer and De-AI cleaner.</span></label>
+          <label class="task-item"><input type="checkbox" /><span>Assemble the flow: Search -> Strategy -> Voice -> Hook -> Humanizer -> De-AI -> Final decision.</span></label>
+          <label class="task-item"><input type="checkbox" /><span>Run one quick test only after the approved blocks are in place.</span></label>
         </div>
       </section>
 
       <section class="lesson">
         <div class="lesson-heading">
-          <p class="eyebrow">What Val brings</p>
+          <p class="eyebrow">Required OK</p>
           <h2>Что нужно от Val до урока</h2>
         </div>
 
         <div class="task-list">
-          <label class="task-item"><input type="checkbox" /><span>Final Tone of Voice feedback: good / bad / banned / rewrite examples.</span></label>
-          <label class="task-item"><input type="checkbox" /><span>1-2 topics she wants to test first.</span></label>
-          <label class="task-item"><input type="checkbox" /><span>Any preferred place for Draft Library: Google Drive, GitHub or local folder.</span></label>
+          <label class="task-item"><input type="checkbox" /><span>OK / правки по стратегии.</span></label>
+          <label class="task-item"><input type="checkbox" /><span>OK / правки по content pillars.</span></label>
+          <label class="task-item"><input type="checkbox" /><span>OK / финальная версия Tone of Voice.</span></label>
+          <label class="task-item"><input type="checkbox" /><span>OK / правки по Val Research Skill.</span></label>
         </div>
       </section>
     </main>
