@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="VAL Research Skill: adapted Deep Research prompt for LinkedIn topics, Val's pillars, reference voices and learning strategy positioning."
+    />
+    <title>VAL LinkedIn · Research Skill</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <header class="portal-hero compact-hero">
+        <nav class="top-nav" aria-label="Навигация">
+          <a href="./valeria-v2-0.html">Val V2.0</a>
+          <a href="./valeria-lesson-3-setup.html">Lesson 3</a>
+          <a href="#skill">Skill</a>
+          <a href="#outputs">Outputs</a>
+        </nav>
+
+        <div class="hero-grid">
+          <div>
+            <p class="eyebrow">Val Content Machine · Research Layer</p>
+            <h1>Val Research Skill</h1>
+            <p class="lead">
+              Адаптированный research skill для Val: берем общий Deep Research
+              подход и добавляем только ее authors, content pillars, topic
+              territories and learning-strategy positioning.
+            </p>
+          </div>
+
+          <aside class="north-star">
+            <span>Status</span>
+            <p>
+              Green layer: почти готово. На уроке 3 останется установить /
+              положить в ее Codex-папку и протестировать на одной теме.
+            </p>
+          </aside>
+        </div>
+      </header>
+
+      <section class="lesson current">
+        <div class="lesson-heading">
+          <p class="eyebrow">What changed</p>
+          <h2>Что мы добавили к research</h2>
+          <p>
+            Мы не меняем саму идею Deep Research. Мы адаптируем ее под Val:
+            добавляем ее три pillars, reference voices, audience, updated
+            positioning and required learning mechanism. То есть search начинает
+            искать не “интересное вообще”, а релевантное для ее LinkedIn
+            visibility.
+          </p>
+        </div>
+
+        <div class="status-grid">
+          <article class="status-card is-ready">
+            <span class="status-badge ready">green</span>
+            <strong>Authors added</strong>
+            <p>Josh Bersin, Pavel Bezruchko, David James, April Dunford, Szilvia Olah.</p>
+          </article>
+          <article class="status-card is-ready">
+            <span class="status-badge ready">green</span>
+            <strong>Pillars added</strong>
+            <p>Making Change Work, Making Complexity Usable, Creative Strategy for Change.</p>
+          </article>
+          <article class="status-card is-ready">
+            <span class="status-badge ready">green</span>
+            <strong>Learning mechanism</strong>
+            <p>Every topic must connect to learning, performance support or adoption.</p>
+          </article>
+          <article class="status-card is-ready">
+            <span class="status-badge ready">green</span>
+            <strong>Output shape</strong>
+            <p>Sources, tensions, angles, examples, risks, post opportunities.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="lesson" id="skill">
+        <div class="lesson-heading">
+          <p class="eyebrow">SKILL.md draft</p>
+          <h2>Val LinkedIn Research Skill</h2>
+          <p>
+            Это можно положить в Codex как отдельный skill / project prompt.
+          </p>
+        </div>
+
+        <div class="prompt-list">
+          <article class="prompt-card">
+            <h3>Val Research Skill</h3>
+            <pre><code>---
+name: val-linkedin-research
+description: Use when Val needs to find LinkedIn post topics, sources, tensions, examples and credible angles for learning strategy inside complex transformation.
+---
+
+# Val LinkedIn Research Skill
+
+You are Val's research layer for LinkedIn visibility.
+
+Core positioning:
+Val helps organizations use learning to turn complex change into new ways of working people actually adopt.
+
+Val's territory:
+Learning for the messy middle of transformation.
+
+Content pillars:
+1. Making Change Work
+2. Making Complexity Usable
+3. Creative Strategy for Change
+
+Reference voices:
+- Josh Bersin: research-backed HR / L&D / workforce synthesis.
+- Pavel Bezruchko: smart simplicity in management.
+- David James: business-first L&D, outcomes over order-taking.
+- April Dunford: positioning discipline.
+- Szilvia Olah: sharp anti-theater pattern naming, used carefully.
+
+When given a topic, do not write the LinkedIn post first.
+Build a research brief first.
+
+Return:
+1. Topic fit
+- pillar;
+- audience;
+- business problem;
+- learning mechanism;
+- why this topic matters now.
+
+2. Source map
+- 5-8 credible sources, reports, podcasts, articles, company examples or expert perspectives;
+- why each source is useful;
+- what claim it may support;
+- what to be careful with.
+
+3. Reference voice lenses
+- what the Josh Bersin lens notices;
+- what the Pavel Bezruchko smart-simplicity lens clarifies;
+- what the David James business-outcomes lens challenges;
+- what the April Dunford positioning lens sharpens;
+- what the Szilvia Olah anti-theater lens names directly but safely.
+
+4. Tensions and angles
+- 5 tensions;
+- 5 assumptions worth challenging;
+- 3 sharp but corporate-safe angles.
+
+5. Learning mechanism
+- what belongs in training;
+- what belongs in performance support / workflow support;
+- what belongs with managers;
+- what belongs in communication / positioning;
+- what should not be solved by another course.
+
+6. Field examples
+- 3 anonymized case-style situations:
+  situation -> friction -> business consequence -> learning/adoption decision -> lesson.
+
+7. Risk check
+- claims that need verification;
+- broad words to soften;
+- where evidence is strong, weak or anecdotal.
+
+8. Post opportunities
+- 5 LinkedIn angles;
+- for each: hook, argument, learning mechanism, practical takeaway, best format.
+
+9. Voice notes
+- phrases that sound like Val;
+- phrases that sound generic / too nice / too harsh / too AI;
+- one rewrite rule to make this topic sound more like Val.
+
+10. Exa queries
+- 10 search queries for better sources, people, examples or reports.</code></pre>
+          </article>
+        </div>
+      </section>
+
+      <section class="lesson" id="outputs">
+        <div class="lesson-heading">
+          <p class="eyebrow">How to use</p>
+          <h2>Где этот skill стоит в машине</h2>
+        </div>
+
+        <div class="content-grid">
+          <article class="lesson-panel compact">
+            <h3>Before research</h3>
+            <p>
+              Topic Radar выбирает тему и проверяет, к какому pillar она
+              относится.
+            </p>
+          </article>
+          <article class="lesson-panel compact">
+            <h3>During research</h3>
+            <p>
+              Research skill собирает sources, tensions, examples, risks and
+              angles.
+            </p>
+          </article>
+          <article class="lesson-panel compact">
+            <h3>After research</h3>
+            <p>
+              Strategy Check решает, идет ли тема в draft, а потом включаются
+              Voice, Humanizer, De-AI and Do-ification.
+            </p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <div class="toast" role="status" aria-live="polite"></div>
+    <script src="./script.js"></script>
+  </body>
+</html>

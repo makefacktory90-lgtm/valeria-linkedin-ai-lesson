@@ -16,6 +16,7 @@
         <nav class="top-nav" aria-label="Навигация">
           <a href="./index.html#lesson-3">Назад к порталу</a>
           <a href="./valeria-v2-0.html">Val V2.0</a>
+          <a href="./valeria-research-skill.html">Research skill</a>
           <a href="#skills">Skills</a>
           <a href="#pillar-routing">Pillars</a>
           <a href="#workflow-test">Test</a>
@@ -49,7 +50,8 @@
           <p>
             Val уходит не с теорией про LinkedIn, а с рабочим weekly workflow:
             найти тему, проверить ее на стратегию, сделать research, переписать
-            в свой голос, почистить AI, проверить факты и сохранить draft.
+            в свой голос, почистить AI, сделать текст практичным и сохранить
+            draft.
           </p>
         </div>
 
@@ -57,9 +59,32 @@
           <p>Final machine</p>
           <strong>
             Topic Radar -> Deep Research -> Pillar Router -> Strategy Check ->
-            Voice Rewriter -> Humanizer -> De-AI Cleaner -> Fact-check ->
+            Voice Rewriter -> Humanizer -> De-AI Cleaner -> Do-ification ->
             Draft Library.
           </strong>
+        </div>
+
+        <div class="status-grid">
+          <article class="status-card is-ready">
+            <span class="status-badge ready">green</span>
+            <strong>Exa + Deep Research</strong>
+            <p>Almost ready. Research is adapted to Val's authors, pillars and themes.</p>
+          </article>
+          <article class="status-card is-review">
+            <span class="status-badge review">red</span>
+            <strong>Strategic search basis</strong>
+            <p>Positioning, strategy, pillars and topic logic need Val's OK.</p>
+          </article>
+          <article class="status-card is-review">
+            <span class="status-badge review">red</span>
+            <strong>Tone of Voice</strong>
+            <p>Needs final examples: good, bad, banned, rewrite style.</p>
+          </article>
+          <article class="status-card is-ready">
+            <span class="status-badge ready">green</span>
+            <strong>Humanizer + De-AI + Do-ification</strong>
+            <p>Ready editing layers. We adapt them to Val's voice on Monday.</p>
+          </article>
         </div>
       </section>
 
@@ -99,45 +124,45 @@
               </tr>
               <tr>
                 <td>Deep Research</td>
-                <td><a href="https://github.com/tonyazhuuki/deep-research-skill" target="_blank" rel="noreferrer">Deep Research skill</a></td>
+                <td><a href="./valeria-research-skill.html">Val Research Skill</a> + <a href="https://github.com/tonyazhuuki/deep-research-skill" target="_blank" rel="noreferrer">Deep Research</a></td>
                 <td>Turns one topic into a structured brief: sources, tensions, evidence, risks and angles.</td>
-                <td>Install / fork / adapt.</td>
+                <td><span class="status-badge ready">green</span> adapted.</td>
               </tr>
               <tr>
                 <td>Pillar Router</td>
                 <td>Val-specific prompt</td>
                 <td>Routes each topic into Making Change Work, Making Complexity Usable or Creative Strategy for Change.</td>
-                <td>Create in lesson 3.</td>
+                <td><span class="status-badge review">red</span> needs Val's strategic OK.</td>
               </tr>
               <tr>
                 <td>Strategy Check</td>
                 <td>Val-specific prompt</td>
                 <td>Checks positioning, audience, business relevance, learning mechanism and proof potential.</td>
-                <td>Create in lesson 3.</td>
+                <td><span class="status-badge review">red</span> needs Val's OK.</td>
               </tr>
               <tr>
                 <td>Voice Rewriter</td>
                 <td>Needs Val's final Tone of Voice</td>
                 <td>Rewrites draft into Val's strategic challenger voice using examples and banned phrases.</td>
-                <td>Needs weekend input.</td>
+                <td><span class="status-badge review">red</span> needs weekend input.</td>
               </tr>
               <tr>
                 <td>Humanizer</td>
-                <td>Val-specific prompt</td>
+                <td>Adapted from humanize layer</td>
                 <td>Adds lived observation, natural rhythm, field language and human reasoning.</td>
-                <td>Create in lesson 3.</td>
+                <td><span class="status-badge ready">green</span> ready.</td>
               </tr>
               <tr>
                 <td>De-AI Cleaner</td>
-                <td>Val-specific prompt</td>
+                <td>Adapted from De-AI layer</td>
                 <td>Removes generic LinkedIn structure, fake drama, guru cadence and corporate fluff.</td>
-                <td>Create in lesson 3.</td>
+                <td><span class="status-badge ready">green</span> ready.</td>
               </tr>
               <tr>
-                <td>Fact-check</td>
-                <td>Val-specific prompt + sources</td>
-                <td>Checks claims, numbers, source quality, overstatements and risky wording.</td>
-                <td>Create in lesson 3.</td>
+                <td>Do-ification</td>
+                <td>Val-specific prompt</td>
+                <td>Turns insight into a useful action: diagnostic question, design decision, checklist or next step.</td>
+                <td><span class="status-badge ready">green</span> ready.</td>
               </tr>
               <tr>
                 <td>Draft Library</td>
@@ -207,7 +232,7 @@
           <label class="task-item"><input type="checkbox" /><span>Run Topic Radar on one pillar.</span></label>
           <label class="task-item"><input type="checkbox" /><span>Run Deep Research on one selected topic.</span></label>
           <label class="task-item"><input type="checkbox" /><span>Route topic through strategy check and pillar check.</span></label>
-          <label class="task-item"><input type="checkbox" /><span>Rewrite one draft through voice / humanizer / de-AI / fact-check.</span></label>
+          <label class="task-item"><input type="checkbox" /><span>Rewrite one draft through voice / humanizer / de-AI / do-ification.</span></label>
           <label class="task-item"><input type="checkbox" /><span>Save the output into Draft Library with status: idea, researched, drafted, edited, ready.</span></label>
         </div>
       </section>

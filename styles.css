@@ -238,6 +238,65 @@ h3 {
   background: rgba(35, 32, 23, 0.58);
 }
 
+.status-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.status-card {
+  min-width: 0;
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(247, 239, 227, 0.055);
+}
+
+.status-card strong {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 1.02rem;
+}
+
+.status-card p {
+  margin-bottom: 0;
+  color: var(--muted);
+  line-height: 1.45;
+}
+
+.status-card.is-ready {
+  border-color: rgba(127, 154, 128, 0.72);
+  background: rgba(127, 154, 128, 0.14);
+}
+
+.status-card.is-review {
+  border-color: rgba(168, 78, 54, 0.82);
+  background: rgba(168, 78, 54, 0.16);
+}
+
+.status-badge {
+  display: inline-grid;
+  min-height: 28px;
+  place-items: center;
+  margin-bottom: 12px;
+  padding: 0 10px;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 950;
+  text-transform: uppercase;
+}
+
+.status-badge.ready {
+  color: #10100e;
+  background: var(--sage);
+}
+
+.status-badge.review {
+  color: #fff2e9;
+  background: var(--rust);
+}
+
 .lesson-heading {
   max-width: 900px;
   margin-bottom: 24px;
@@ -534,6 +593,7 @@ tr:last-child td {
   .content-grid,
   .tool-grid,
   .post-grid,
+  .status-grid,
   .program-map {
     grid-template-columns: 1fr;
   }
