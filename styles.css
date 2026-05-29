@@ -275,6 +275,52 @@ h3 {
   background: rgba(168, 78, 54, 0.16);
 }
 
+.approval-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.approval-card {
+  display: grid;
+  align-content: start;
+  gap: 8px;
+}
+
+.approval-card label {
+  width: fit-content;
+  display: inline-grid;
+  grid-template-columns: 18px auto;
+  gap: 8px;
+  align-items: center;
+  margin-top: 4px;
+  color: rgba(247, 239, 227, 0.9);
+  font-size: 0.84rem;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.approval-card input {
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  accent-color: var(--sage);
+}
+
+.approval-card.is-review:has(input:checked) {
+  border-color: rgba(127, 154, 128, 0.72);
+  background: rgba(127, 154, 128, 0.14);
+}
+
+.approval-card.is-review:has(input:checked) .status-badge.review {
+  color: #10100e;
+  background: var(--sage);
+  font-size: 0;
+}
+
+.approval-card.is-review:has(input:checked) .status-badge.review::after {
+  content: "OK";
+  font-size: 0.72rem;
+}
+
 .status-badge {
   display: inline-grid;
   min-height: 28px;

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="VAL content machine V1: финальный tone of voice, кастомный Deep Research prompt и пайплайн Search -> Voice -> Humanizer -> De-AI -> Do-ification -> Drafts."
+      content="VAL content machine V1: финальный tone of voice, content pillars, кастомный Deep Research prompt и пайплайн Search -> Strategy -> Voice -> Humanizer -> De-AI -> Do-ification -> Drafts."
     />
     <title>VAL LinkedIn · Content Machine V1</title>
     <link rel="stylesheet" href="./styles.css" />
@@ -17,7 +17,11 @@
           <a href="./index.html#lesson-3">Назад к порталу</a>
           <a href="./valeria-v2-0.html">Val V2.0</a>
           <a href="./valeria-strategy-v2-2026-05-29.html">Strategy V2</a>
+          <a href="#assembly">Assembly</a>
           <a href="#voice-final">Voice</a>
+          <a href="#pillars">Pillars</a>
+          <a href="#three-month-plan">3 months</a>
+          <a href="#topic-search">Topic search</a>
           <a href="#deep-research-prompt">Deep Research</a>
           <a href="#pipeline">Pipeline</a>
           <a href="#week-plan">Monday</a>
@@ -45,52 +49,94 @@
         </div>
       </header>
 
-      <section class="lesson current">
+      <section class="lesson current" id="assembly">
         <div class="lesson-heading">
-          <p class="eyebrow">Strategy read</p>
-          <h2>Мне стратегия нравится, но есть один жесткий guardrail</h2>
+          <p class="eyebrow">Final assembly map</p>
+          <h2>Что уже собрано и что ждет OK от Val</h2>
           <p>
-            V2 стала сильнее после обратной связи Леры: updated message,
-            learning mechanism, sharper voice and reference voices теперь
-            работают вместе. Единственный риск: если не проверять каждый текст
-            на learning mechanism, Val снова будет звучать как умный change
-            consultant. Поэтому в машину нужно встроить обязательный фильтр:
-            what does this mean for learning, performance support or adoption?
+            За три недели мы собрали основу LinkedIn-системы: positioning,
+            strategy, content pillars, topic search, research и draft pipeline.
+            До понедельника нужно подтвердить красные блоки. После OK они
+            становятся базой финального флоу.
           </p>
         </div>
 
-        <div class="content-grid">
-          <article class="lesson-panel compact">
-            <h3>Strong</h3>
-            <p>
-              Есть ясная территория: learning for the messy middle of
-              transformation, not training content production.
-            </p>
+        <div class="status-grid approval-grid">
+          <article class="status-card approval-card is-review">
+            <span class="status-badge review">needs Val OK</span>
+            <strong>Strategic basis</strong>
+            <p>Positioning, 10% message, audience, territory and 3-month visibility plan.</p>
+            <label><input type="checkbox" /> OK from Val</label>
           </article>
-          <article class="lesson-panel compact">
-            <h3>Sharper</h3>
-            <p>
-              Voice теперь не “nice L&D”, а strategic challenger: clear,
-              business-minded, evidence-aware, practical.
-            </p>
+          <article class="status-card approval-card is-review">
+            <span class="status-badge review">needs Val OK</span>
+            <strong>Tone of Voice</strong>
+            <p>Commercially sharp, evidence-aware, practical, slightly contrarian, smart simplicity.</p>
+            <label><input type="checkbox" /> OK from Val</label>
           </article>
-          <article class="lesson-panel compact">
-            <h3>Needs system</h3>
-            <p>
-              Стратегия сама себя не выполнит. Нужен weekly pipeline, где поиск,
-              голос, практическая полезность и черновики живут в одном
-              процессе.
-            </p>
+          <article class="status-card approval-card is-review">
+            <span class="status-badge review">needs Val OK</span>
+            <strong>Content pillars</strong>
+            <p>Making Change Work, Making Complexity Usable, Creative Strategy for Change.</p>
+            <label><input type="checkbox" /> OK from Val</label>
           </article>
+          <article class="status-card approval-card is-ready">
+            <span class="status-badge ready">ready</span>
+            <strong>Topic search</strong>
+            <p>Topic radar worked: themes are clear enough to connect to research and drafts.</p>
+            <label><input type="checkbox" checked /> Ready</label>
+          </article>
+          <article class="status-card approval-card is-ready">
+            <span class="status-badge ready">ready</span>
+            <strong>Val Research Skill</strong>
+            <p>Deep Research fork now includes Val's authors, pillars, topics and learning mechanism.</p>
+            <label><input type="checkbox" checked /> Ready</label>
+          </article>
+          <article class="status-card approval-card is-ready">
+            <span class="status-badge ready">ready</span>
+            <strong>Text machine</strong>
+            <p>Humanizer, De-AI and Do-ification are ready to plug into the Monday flow.</p>
+            <label><input type="checkbox" checked /> Ready</label>
+          </article>
+        </div>
+
+        <div class="quote-band">
+          <p>Monday condition</p>
+          <strong>
+            If the red blocks are OK, Monday is machine setup. If something is
+            not OK, Val edits that block first, then we build the flow around the
+            corrected version.
+          </strong>
+        </div>
+      </section>
+
+      <section class="lesson" id="three-month-plan">
+        <div class="lesson-heading">
+          <p class="eyebrow">Required guardrail</p>
+          <h2>Learning mechanism stays inside every post</h2>
+          <p>
+            V2 works only if every topic is checked through the learning lens.
+            Without this filter, Val can start sounding like a smart change
+            consultant instead of a business-minded learning strategist.
+          </p>
+        </div>
+
+        <div class="homework">
+          <h3>Mandatory filter for the machine</h3>
+          <pre><code>Before drafting, answer:
+What does this topic mean for learning, performance support or adoption?
+
+If the answer is weak, the topic needs a new angle before it becomes a LinkedIn post.</code></pre>
         </div>
       </section>
 
       <section class="lesson" id="voice-final">
         <div class="lesson-heading">
-          <p class="eyebrow">Final tone of voice</p>
+          <p class="eyebrow">Tone of Voice · needs Val OK</p>
           <h2>Strategic challenger with smart simplicity</h2>
           <p>
-            Это не “быть злой” и не “быть милой”. Это звучать как человек,
+            Это текущая версия voice, которую нужно подтвердить на реальных
+            примерах. Это не “быть злой” и не “быть милой”. Это звучать как человек,
             который быстро видит слабое место в learning / transformation
             системе и умеет объяснить его простым бизнес-языком.
           </p>
@@ -159,6 +205,150 @@
 -> practical alternative
 -> one clean takeaway</code></pre>
         </div>
+
+        <div class="homework">
+          <h3>What Val sends before Monday</h3>
+          <pre><code>1. 3-5 examples that sound close to me.
+2. 3-5 examples that do not sound like me, if useful.
+3. Phrases / structures the AI should stop using.
+4. One stronger version of my Tone of Voice in my own words.
+
+We use this as the final voice layer in the Monday machine.</code></pre>
+        </div>
+      </section>
+
+      <section class="lesson" id="pillars">
+        <div class="lesson-heading">
+          <p class="eyebrow">Content pillars · needs Val OK</p>
+          <h2>Три территории для visibility</h2>
+          <p>
+            Эти pillars удерживают Val в learning strategy, а не в общем change
+            consulting. Если они окей, машина будет использовать их как роутер:
+            каждый topic, research brief and draft должны попадать в одну из
+            трех территорий.
+          </p>
+        </div>
+
+        <div class="content-grid">
+          <article class="lesson-panel compact">
+            <h3>01 · Making Change Work</h3>
+            <p>
+              What change looks like after launch: overwhelm, workarounds,
+              uneven manager support, old habits and adoption friction.
+            </p>
+            <p>
+              <strong>Audience reads this as:</strong> Val understands what
+              really happens when change meets people and designs learning that
+              supports adoption.
+            </p>
+          </article>
+
+          <article class="lesson-panel compact">
+            <h3>02 · Making Complexity Usable</h3>
+            <p>
+              Smart simplicity: turning systems, rules, processes and
+              exceptions into usable decisions and actions.
+            </p>
+            <p>
+              <strong>Audience reads this as:</strong> Val can translate
+              complexity into practical learning and performance support.
+            </p>
+          </article>
+
+          <article class="lesson-panel compact">
+            <h3>03 · Creative Strategy for Change</h3>
+            <p>
+              Positioning, story, Big Idea and message people can remember
+              inside internal transformation.
+            </p>
+            <p>
+              <strong>Audience reads this as:</strong> Val brings marketing
+              thinking into learning, change communication and adoption.
+            </p>
+          </article>
+        </div>
+
+        <div class="homework">
+          <h3>OK / edit check</h3>
+          <pre><code>For each pillar:
+1. Does this feel like a territory I want to own?
+2. Does it clearly connect back to learning?
+3. Is anything missing, too broad or not me?
+4. Which pillar feels strongest for the first month of posting?</code></pre>
+        </div>
+      </section>
+
+      <section class="lesson" id="topic-search">
+        <div class="lesson-heading">
+          <p class="eyebrow">3-month visibility plan · needs Val OK</p>
+          <h2>Как стратегия превращается в LinkedIn cadence</h2>
+          <p>
+            Это не жесткий контент-календарь. Это рабочая рамка на первые три
+            месяца, чтобы Val росла как visible learning strategist через
+            повторяемые темы, research and recognizable voice.
+          </p>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Period</th>
+                <th>Focus</th>
+                <th>What to publish</th>
+                <th>What to learn</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Month 1</td>
+                <td>Make the territory visible.</td>
+                <td>Posts from three pillars: change reality, usable complexity, creative strategy for adoption.</td>
+                <td>Which topics get saves, comments, DMs and “this is exactly it” reactions.</td>
+              </tr>
+              <tr>
+                <td>Month 2</td>
+                <td>Build recognizable points of view.</td>
+                <td>Repeatable formats: pattern notes, teardown posts, “what learning misses”, field examples.</td>
+                <td>Which formats make Val sound most like herself.</td>
+              </tr>
+              <tr>
+                <td>Month 3</td>
+                <td>Turn visibility into strategic authority.</td>
+                <td>Sharper POV posts, practical frameworks, adoption diagnostics, examples from transformation work.</td>
+                <td>Which angles attract the right audience: L&D leaders, transformation leaders, business stakeholders.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="lesson">
+        <div class="lesson-heading">
+          <p class="eyebrow">Topic search · ready</p>
+          <h2>Как мы ищем темы</h2>
+          <p>
+            Поиск тем уже сработал: у Val есть достаточно тем, чтобы не сидеть
+            перед пустым экраном. Теперь topic search становится первым слоем
+            машины: каждую неделю он поднимает новые angles, а strategy check
+            решает, что идет в research and draft.
+          </p>
+        </div>
+
+        <div class="content-grid">
+          <article class="lesson-panel compact">
+            <h3>Inputs</h3>
+            <p>Positioning, content pillars, reference voices, market signals, saved posts and recurring work tensions.</p>
+          </article>
+          <article class="lesson-panel compact">
+            <h3>Selection logic</h3>
+            <p>Pick topics with business tension, learning mechanism, practical use and enough evidence to support a point of view.</p>
+          </article>
+          <article class="lesson-panel compact">
+            <h3>Output</h3>
+            <p>Prioritized backlog: pillar, why now, tension, learning angle, research need and possible hook.</p>
+          </article>
+        </div>
       </section>
 
       <section class="lesson" id="deep-research-prompt">
@@ -166,10 +356,10 @@
           <p class="eyebrow">Custom Deep Research prompt</p>
           <h2>Fork for Val: sources + voice + pillars</h2>
           <p>
-            Это можно дать Лере как первый тест на 2 дня. Она берет одну тему,
-            запускает research, смотрит, что откликается, и приносит нам:
-            хорошие источники, слабые места, углы для постов и фразы, которые
-            звучат / не звучат как она.
+            Это research-слой для финальной машинки. Он уже адаптирован под
+            Val: источники, reference voices, content pillars, learning
+            mechanism and voice guardrails. До понедельника тестируем его на
+            1-2 темах.
           </p>
         </div>
 
@@ -270,7 +460,7 @@ Return:
       <section class="lesson" id="pipeline">
         <div class="lesson-heading">
           <p class="eyebrow">Monday pipeline</p>
-          <h2>Search -> Voice -> Humanizer -> De-AI -> Do-ification -> Drafts</h2>
+          <h2>Search -> Strategy -> Voice -> Humanizer -> De-AI -> Do-ification -> Drafts</h2>
           <p>
             Это финальная точка менторства: не “мы поговорили про LinkedIn”, а
             у Леры есть процесс, который можно повторять каждую неделю.
@@ -290,37 +480,37 @@ Return:
             <tbody>
               <tr>
                 <td>1 · Search</td>
-                <td>Exa + Deep Research по одной теме или одному pillar.</td>
+                <td><span class="status-badge ready">ready</span> Exa + Deep Research по одной теме или одному pillar.</td>
                 <td>Research brief, sources, tensions, examples, post angles.</td>
                 <td>Есть минимум 3 credible sources and one real business tension.</td>
               </tr>
               <tr>
                 <td>2 · Strategy check</td>
-                <td>Проверка на positioning, pillar fit, audience, learning mechanism.</td>
+                <td><span class="status-badge review">needs OK</span> Проверка на positioning, pillar fit, audience, learning mechanism.</td>
                 <td>Green / yellow / red topic decision.</td>
                 <td>Если нет learning mechanism, тема не идет в draft.</td>
               </tr>
               <tr>
                 <td>3 · Voice rewrite</td>
-                <td>Черновик переписывается в Val voice: sharp, practical, evidence-aware.</td>
+                <td><span class="status-badge review">needs OK</span> Черновик переписывается в Val voice: sharp, practical, evidence-aware.</td>
                 <td>Draft 1 in Val direction.</td>
-                <td>Звучит как smart consultant with edge, not generic LinkedIn.</td>
+                <td>Звучит как learning strategist with edge, not generic LinkedIn.</td>
               </tr>
               <tr>
                 <td>4 · Humanizer</td>
-                <td>Добавляем живую логику, наблюдение, естественный rhythm, field language.</td>
+                <td><span class="status-badge ready">ready</span> Добавляем живую логику, наблюдение, естественный rhythm, field language.</td>
                 <td>Draft 2 with human reasoning.</td>
                 <td>Есть lived observation, not just polished explanation.</td>
               </tr>
               <tr>
                 <td>5 · De-AI</td>
-                <td>Убираем AI structure, fake drama, guru cadence, over-clean transitions.</td>
+                <td><span class="status-badge ready">ready</span> Убираем AI structure, fake drama, guru cadence, over-clean transitions.</td>
                 <td>Draft 3, less synthetic.</td>
                 <td>Нет “In today's fast-paced world”, empty lists, fake cliffhangers.</td>
               </tr>
               <tr>
                 <td>6 · Do-ification</td>
-                <td>Превращаем мысль в полезное действие: diagnostic question, design decision, checklist, next step.</td>
+                <td><span class="status-badge ready">ready</span> Превращаем мысль в полезное действие: diagnostic question, design decision, checklist, next step.</td>
                 <td>Action-oriented draft.</td>
                 <td>После текста понятно, что с этим делать в learning / transformation work.</td>
               </tr>
@@ -338,29 +528,22 @@ Return:
       <section class="lesson" id="week-plan">
         <div class="lesson-heading">
           <p class="eyebrow">Before Monday</p>
-          <h2>Что дать Лере потестить 2 дня</h2>
+          <h2>Что тестируем до понедельника</h2>
+          <p>
+            Задача не “написать идеально”. Задача быстро проверить, какие
+            темы, источники и voice examples можно ставить в финальную машинку.
+          </p>
         </div>
 
         <div class="task-list">
+          <label class="task-item"><input type="checkbox" /><span>Поставить OK или правки на strategic basis: positioning, pillars, 3-month visibility plan.</span></label>
+          <label class="task-item"><input type="checkbox" /><span>Поставить OK или правки на Tone of Voice.</span></label>
+          <label class="task-item"><input type="checkbox" /><span>Дать хорошие voice examples: 3-5 фрагментов, которые звучат близко к Val.</span></label>
           <label class="task-item"><input type="checkbox" /><span>Выбрать 2 темы: одну из Making Change Work, одну из Making Complexity Usable.</span></label>
           <label class="task-item"><input type="checkbox" /><span>Запустить Val Deep Research Brief по каждой теме.</span></label>
           <label class="task-item"><input type="checkbox" /><span>Отметить 5 источников / мыслей, которые реально хочется использовать.</span></label>
-          <label class="task-item"><input type="checkbox" /><span>Отметить 5 фраз, которые звучат как Val, и 5 фраз, которые звучат generic / too nice / too harsh.</span></label>
+          <label class="task-item"><input type="checkbox" /><span>Отметить фразы, которые звучат как Val, и фразы, которые AI должен больше не использовать.</span></label>
           <label class="task-item"><input type="checkbox" /><span>Принести 2 rough drafts или хотя бы 2 post angles на последний урок.</span></label>
-        </div>
-      </section>
-
-      <section class="lesson">
-        <div class="lesson-heading">
-          <p class="eyebrow">Mentorship format note</p>
-          <h2>Да, 4 недели лучше</h2>
-          <p>
-            Для такого формата 3 недели мало: человек только на второй неделе
-            начинает понимать, что вообще происходит, а на третьей уже пора
-            собирать систему. Следующий нормальный формат: week 1 positioning,
-            week 2 content and research, week 3 machine setup, week 4 launch,
-            review and calibration.
-          </p>
         </div>
       </section>
     </main>
